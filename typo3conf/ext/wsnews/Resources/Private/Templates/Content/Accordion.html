@@ -1,0 +1,75 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+    <f:layout name="Content"/>
+
+    <f:section name="Configuration">
+        <flux:form id="accordion" options="{group: 'FCE',icon:'EXT:wstheme/Resources/Public/Icons/Content/Example.svg'}" label="Accordion">
+            <flux:form.sheet name="panels">
+                <flux:form.section name="panels">
+                    <flux:form.object name="panel">
+                        <flux:field.input name="title"/>
+                        <flux:field.checkbox name="active"/>
+                    </flux:form.object>
+                </flux:form.section>
+            </flux:form.sheet>
+            <flux:grid>
+                <f:for each="{panels}" as="panel" iteration="iteration">
+                    <flux:grid.row>
+                        <flux:grid.column name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel {iteration.cycle}')}"/>
+                    </flux:grid.row>
+                </f:for>
+            </flux:grid>
+        </flux:form>
+    </f:section>
+
+    <f:section name="Main">
+
+        <v:variable.set name="activeTabIndex" value="-1"/>
+        <f:for each="{panels}" as="panel" iteration="iteration">
+            <f:if condition="{panel.panel.active}">
+                <v:variable.set name="activeTabIndex" value="{iteration.cycle}"/>
+            </f:if>
+        </f:for>
+
+        <div id="accordion-{record.uid}" class="accordion">
+            <f:for each="{panels}" as="panel" iteration="iteration">
+                <div class="card">
+                    <div class="card-header" role="tab">
+                            <a class="{f:if(condition: '{activeTabIndex} == {iteration.cycle}', else: 'collapsed')}" data-toggle="collapse" href="#panel-{record.uid}-{iteration.index}">
+                                {panel.panel.title}
+                            </a>
+                        <div class="accordion-arrow">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Einbauvarianten" transform="translate(-1775.000000, -2040.000000)" fill-rule="nonzero">
+                                        <g id="down-arrow-(3)" transform="translate(1775.000000, 2040.000000)">
+                                            <g id="Group" fill="#FFFFFF">
+                                                <path d="M0.740740741,20 C0.740740741,9.3637037 9.3637037,0.740740741 20,0.740740741 C30.6362963,0.740740741 39.2592593,9.3637037 39.2592593,20 C39.2592593,30.6362963 30.6362963,39.2592593 20,39.2592593 C9.3637037,39.2592593 0.740740741,30.6362963 0.740740741,20 Z" id="Shape outer"></path>
+                                            </g>
+                                            <g id="inner" fill="#FFFFFF">
+                                            <path d="M19.5,26 C19.1799292,26 18.8605892,25.8781489 18.616517,25.6351763 L10.214294,17.2456905 C9.92856868,16.9603984 9.92856868,16.4992612 10.214294,16.2139691 C10.5000192,15.928677 10.9618565,15.928677 11.2475818,16.2139691 L19.5,24.4538772 L27.7524182,16.2139691 C28.0381435,15.928677 28.4999808,15.928677 28.785706,16.2139691 C29.0714313,16.4992612 29.0714313,16.9603984 28.785706,17.2456905 L20.383483,25.6351763 C20.1401415,25.8781489 19.8200708,26 19.5,26 Z" id="Shape inner" fill="#004091"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="panel-{record.uid}-{iteration.index}" data-parent="#accordion-{record.uid}" class="accordion-body collapse {f:if(condition: '{activeTabIndex} == {iteration.cycle}', then: 'show')}">
+                        <div class="card-body">
+                            <flux:content.render area="content.{iteration.index}"/>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+
+    </f:section>
+
+</div>

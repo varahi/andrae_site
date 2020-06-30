@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+
+
+<div class="newsItemAll">
+	<h5><n:link class="heading" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+		<span itemprop="headline">{newsItem.title}</span>
+	</n:link></h5>
+	<p>{newsItem.teaser} <n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">mehr</n:link>
+	</p>
+</div>
+</html>

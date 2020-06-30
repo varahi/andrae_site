@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<f:layout name="General"/>
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+	<div class="main-content col-xs-10 content career">
+		<h1>
+			Neuigkeiten
+		</h1>
+		<f:if condition="{news}">
+			<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}"
+							   initial="{offset:settings.offset,limit:settings.limit}">
+				<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+					<f:render partial="List/ItemAll" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+				</f:for>
+			</n:widget.paginate>
+		</f:if>
+	</div>
+</f:section>
+</html>
