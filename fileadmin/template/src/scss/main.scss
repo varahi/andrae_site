@@ -1,0 +1,46 @@
+/********************************
+ * Vendor Variables             *
+ ********************************/
+
+$fa-font-path: '../../fonts';
+$red: #b61928;
+$grey: #9d9c9c;
+$button-grey: #ececec;
+$hightlighter: #b61928;
+/********************************
+ * Fonts               *
+ ********************************/
+@font-face { font-family: 'OpenSans-Regular'; src: url('../../fonts/OpenSans-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'SourceSansPro-Black'; src: url('../../fonts/SourceSansPro-Black.ttf') format('truetype'); }
+@font-face { font-family: 'SourceSansPro-Bold'; src: url('../../fonts/SourceSansPro-Bold.ttf') format('truetype'); }
+@font-face { font-family: 'SourceSansPro-Light'; src: url('../../fonts/SourceSansPro-Light.ttf') format('truetype'); }
+@font-face { font-family: 'SourceSansPro-ExtraLight'; src: url('../../fonts/SourceSansPro-ExtraLight.ttf') format('truetype'); }
+
+
+/********************************
+ * Vendor Files                 *
+ ********************************/
+
+// @import "../node_modules/";
+@import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../../../node_modules/font-awesome/scss/font-awesome";
+@import "../../../../node_modules/bootstrap-select/dist/css/bootstrap-select";
+@import "../../../../node_modules/jquery-ui/themes/base/datepicker";
+@import "../../../../node_modules/jquery-ui/demos/demos";
+
+
+/********************************
+ * Custom Variables             *
+ ********************************/
+
+
+/********************************
+ * Custom Classes               *
+ ********************************/
+
+@import "classes/global";
+@import "classes/footer";
+@import "classes/nav";
+//@import "classes/material-design";
+@import "classes/newsletter";
+@import "classes/cookieConsent";

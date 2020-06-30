@@ -1,0 +1,106 @@
+#footer {
+	padding: 20px 0;
+	background-color: black;
+	.footerWrapper {
+		padding: 0;
+		@media (max-width: $screen-sm-max){
+			padding: 0;
+		}
+		ul {
+			padding: 10px 15px;
+			font-family: SourceSansPro-Bold, sans-serif;
+			color: $grey;
+			font-size: 16px;
+			margin: 0px;
+			a {
+				font-family: SourceSansPro-Bold, sans-serif;
+			}
+			@media (max-width: $screen-sm-max){
+				margin: 0;
+			}
+			li {
+				list-style: none;
+				color: $grey;
+				text-transform: none;
+				font-size: 16px;
+				padding: 4px 0 !important;
+				line-height: 1;
+				a {
+					font-family: SourceSansPro-Light, sans-serif;
+					text-transform: none;
+					color: $grey;
+					font-size: 16px;
+					&:hover {
+						text-decoration: none;
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+	.footerRight {
+		@media (max-width: $screen-sm-max){
+			z-index: 0;
+	}
+
+		.right {
+			text-align: right !important;
+			ul, li, a {
+				text-align: right !important;
+			}
+			a{
+				cursor: pointer;
+				&:hover {
+					text-decoration: none;
+					color: $red;
+				}
+			}
+		}
+	}
+	.bottom-right{
+		text-align: right;
+		display: block;
+		float: right;
+		right: 0;
+		//padding-left: 23px;
+		@media (max-width: $screen-md-max){
+			margin: 0 15px;
+			padding-left: 15px;
+		}
+		@media (max-width: $screen-sm-max){
+			margin: 0;
+			padding-left: 15px;
+			padding-right: 0;
+		}
+		li{
+			display: inline-block;
+			list-style: none;
+			padding: 0 3px;
+			&:nth-child(2){
+				padding: 0;
+			}
+			a{
+				color: $grey;
+				font-size: 16px;
+				text-transform: none;
+				padding: 0 3px;
+				&:hover{
+					text-decoration: none;
+					color: $red;
+					cursor: pointer;
+				}
+			}
+			&:not(:last-child):after {
+				content: "|";
+				color: #9d9c9c;
+				font-size: 15px;
+				position: absolute;
+				top: 4px;
+			}
+		}
+	}
+	.impressum {
+		color: #ffffff;
+		margin-top: -50px;
+	}
+}

@@ -1,0 +1,182 @@
+<head>
+
+    <script src="https://cdn.rawgit.com/HubSpot/tether/v1.3.4/dist/js/tether.min.js"></script>
+    <!--<script src="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.iife.min.js"></script>-->
+
+</head>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="de"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+
+     v:schemaLocation="http://fluidtypo3.org/schemas/vhs-2.1.4.xsd"
+     f:schemaLocation="http://fluidtypo3.org/schemas/fluid-6.2.0.xsd">
+
+    <header>
+        <f:render section="CookieConsentMultilangual" partial="CookieConsentMultilangual" arguments="{_all}"/>
+        <div class="row">
+            <div class="container">
+                <div class="col-md-3 col-sm-5 col-xs-7 logo">
+                    <f:link.page pageUid="1"><img src="fileadmin/template/img/logo.svg"></f:link.page>
+                </div>
+                 <div class="col-md-9 col-sm-7 col-xs-5">
+
+                         <f:comment><f:render section="LanguageMenu" partial="LanguageMenu" arguments="{_all}"/></f:comment>
+
+                     <div class="mobile">
+                        <ul class="topnav" id="myTopnav">
+                            <li class="icon">
+                                <div id="nav-icon3" class="openNav">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </li>
+                            <v:page.menu expandAll="true" pageUid="13" entryLevel="0" levels="0" as="mainmenu">
+                                <div class="desktopMenu hidden">
+                                    <f:for each="{mainmenu}" as="menu">
+                                        <li class="{menu.class}"><a href="{menu.link}"
+                                                                    title="{menu.title}">{menu.title}</a></li>
+                                    </f:for>
+                                </div>
+                            </v:page.menu>
+
+                            <div class="menuWrapper">
+                                <div class="mobileMenu ">
+                                    <div class="mainMenuWrapper">
+                                        <div id="nav-icon3" class="open inNav closeNav">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+
+                                        <div class="language">
+                                            <v:page.languageMenu hideNotTranslated="1" order="0,1" class="inline" layout="name" defaultLanguageLabel="Deutsch" defaultIsoFlag="de" as="languageMenu">
+                                                <f:if condition="{languageMenu}">
+                                                    <ul>
+                                                        <f:for each="{languageMenu}" as="lang" iteration="i">
+                                                            <li class="{f:if(condition: i.isLast, then: 'last')}"><a href="{lang.url}">{lang.label}</a></li>
+                                                        </f:for>
+                                                    </ul>
+                                                </f:if>
+                                            </v:page.languageMenu>
+                                            <!--
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="active">
+                                                        Deutsch
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        English
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            -->
+                                        </div>
+
+                                        <a class="nav-logo" href="index.php"><img
+                                                src="fileadmin/template/img/logo-weiß.svg"></a>
+                                        <v:page.menu expandAll="true" pageUid="13" entryLevel="0" levels="0"
+                                                     as="mainmenu">
+                                            <f:for each="{mainmenu}" as="menu">
+                                                <div class="navItem">
+                                                    <li class="{menu.class}">
+                                                        <a href="{menu.link}" title="{menu.title}">{menu.title}</a>
+                                                    </li>
+                                                    <!--
+                                                    <f:if condition="{menu.class} == 'active sub'">
+                                                        <f:then>
+                                                            <a href="#" class="openSubMenu openedMenu">
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:if condition="{menu.class} == 'active sub '">
+                                                                <f:then>
+                                                                    <a href="#" class="openSubMenu openedMenu">
+                                                                </f:then>
+                                                                <f:else>
+                                                                    <a href="#" class="openSubMenu">
+                                                                </f:else>
+                                                            </f:if>
+                                                        </f:else>
+                                                    </f:if>
+
+
+                                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                                    </a>
+                                                    -->
+                                                </div>
+
+                                                <!--<v:page.menu expandAll="true" pageUid="{menu.uid}" entryLevel="0"
+                                                             levels="0"
+                                                             as="submenu">
+                                                    <f:if condition="{menu.class} == 'active sub'">
+                                                        <f:then>
+                                                            <div class="subMobileNav openedMobileNav">
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:if condition="{menu.class} == 'active sub '">
+                                                                <f:then>
+                                                                    <div class="subMobileNav openedMobileNav">
+                                                                </f:then>
+                                                                <f:else>
+                                                                    <div class="subMobileNav">
+                                                                </f:else>
+                                                            </f:if>
+                                                        </f:else>
+                                                    </f:if>
+                                                        <f:for each="{submenu}" as="sub">
+                                                            <li class="{sub.class}"><a href="{sub.link}" title="{sub.title}">{sub.title}</a>
+                                                            </li>
+                                                        </f:for>
+                                                    </div>
+                                                </v:page.menu>
+                                                -->
+                                            </f:for>
+                                        </v:page.menu>
+                                    </div>
+                                    <div class="fillMobilelMenuSpace"></div>
+                                    <div class="mobileMenuBottom">
+                                        <ul class="menuFooter">ANDRÄ Consulting Group
+                                            <li>Steinbeisstraße 13</li>
+                                            <li>71332 Waiblingen</li>
+                                            <br>
+                                            <f:if condition="{v:page.language()}==1">
+                                                <f:then>
+                                                    <li>Phone: <a href="tel: +497151959500">+49 7151 959500</a></li>
+                                                    <li>Fax: <a href="fax: +4971519595095">+49 7151 95950-95</a></li>
+                                                </f:then>
+                                                <f:else>
+                                                    <li>Telefon: <a href="tel: +497151959500">07151 959500</a></li>
+                                                    <li>Telefax: <a href="fax: +4971519595095">07151 95950-95</a></li>
+                                                </f:else>
+                                            </f:if>
+                                            <br>
+                                            <li><a href="mailto:info@andrae.de"> info@andrae.de</a></li>
+                                            <li><a href="/">www.andrae.de</a></li>
+                                            <br>
+                                            <li>
+                                                <f:if condition="{v:page.language()}==1">
+                                                    <f:then>
+                                                        <a href="/en/impressum-datenschutz/impressum" title="Imprint">Imprint |</a>
+                                                        <a href="/en/impressum-datenschutz/datenschutz" title="Privacy Police"> Privacy Police</a>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <a href="/impressum-datenschutz/impressum" title="Impressum">Impressum |</a>
+                                                        <a href="/impressum-datenschutz/datenschutz" title="Datenschutz"> Datenschutz</a>
+                                                    </f:else>
+                                                </f:if>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>

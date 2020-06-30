@@ -1,0 +1,597 @@
+.nlManContainer {
+
+  width: 100%;
+
+
+  .bmd-form-group {
+    width: 400px;
+  }
+
+
+
+}
+//
+//#c165y {
+//  input[type="checkbox"] {
+//    display: none;
+//  }
+//
+//  input[type="radio"], input[type="checkbox"] {
+//    margin: 4px 0 0;
+//    margin-top: 1px \9;
+//    line-height: normal;
+//  }
+//
+//  input[type="checkbox"], input[type="radio"] {
+//    box-sizing: border-box;
+//    padding: 0;
+//  }
+//
+//  input {
+//    height: 34px;
+//    padding: 6px 10px;
+//    border-radius: 4px;
+//    border: 1px solid #c9d1da;
+//    outline: none;
+//    color: #5f666b;
+//    vertical-align: baseline;
+//  }
+//
+//  input[type="checkbox"] + label {
+//    font-size: 14px;
+//    cursor: pointer;
+//    margin: 0;
+//  }
+//  label {
+//    vertical-align: baseline;
+//    font-weight: 400;
+//    line-height: 32px;
+//    margin: 0;
+//  }
+//  label {
+//    display: inline-block;
+//    max-width: 100%;
+//    margin-bottom: 5px;
+//    font-weight: bold;
+//  }
+//  input[type="checkbox"] + label:before {
+//    content: "\f096";
+//    color: #c9d1da;
+//    //font-family: FontAwesome;
+//    width: 14px;
+//    display: inline-block;
+//  }
+//
+//  input[type="checkbox"] + label span {
+//    margin-left: 12px;
+//  }
+//
+//  a {
+//    color: #00baff;
+//    text-decoration: none;
+//  }
+//}
+
+#c165 {
+
+  //.nlManContainer {
+  //
+  //  .xRow {
+  //    margin: 15px 0;
+  //  }
+  //
+  //
+  //  .checkbox-inline {
+  //    .checkbox-decorator {
+  //      position: absolute;
+  //      top: 3px;
+  //      left: 0;
+  //      padding: 0;
+  //      margin: 0;
+  //    }
+  //
+  //  }
+  //
+  //  .checkbox-inline-error {
+  //    border: 2px solid #b61928;
+  //    border-radius: 4px;
+  //
+  //  }
+  //
+  //
+  //}
+
+
+
+  //.regular-checkbox + label { }
+  //
+  //label {
+  //  display: inline;
+  //  color: #000;
+  //}
+  //
+  //.regular-checkbox {
+  //  display: none;
+  //}
+  //
+  //.regular-checkbox + label {
+  //  background-color: #fafafa;
+  //  border: 1px solid #cacece;
+  //  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  //  padding: 9px;
+  //  border-radius: 3px;
+  //  display: inline-block;
+  //  position: relative;
+  //}
+  //
+  //.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+  //  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+  //}
+  //
+  //.regular-checkbox:checked + label {
+  //  background-color: #e9ecee;
+  //  border: 1px solid #adb8c0;
+  //  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+  //  color: #99a1a7;
+  //}
+  //
+  //.regular-checkbox:checked + label:after {
+  //  content: '\2714';
+  //  font-size: 14px;
+  //  position: absolute;
+  //  top: 3px;
+  //  left: 3px;
+  //  color: #99a1a7;
+  //}
+  //
+  //.big-checkbox + label {
+  //  padding: 10px;
+  //}
+  //
+  //.big-checkbox:checked + label:after {
+  //  font-size: 12px;
+  //  left: 6px;
+  //}
+  //
+  //.tag {
+  //  font-family: Arial, sans-serif;
+  //  width: 200px;
+  //  position: relative;
+  //  top: 5px;
+  //  font-weight: bold;
+  //  text-transform: uppercase;
+  //  display: block;
+  //  float: left;
+  //}
+
+}
+
+.nlLabel:first-child {
+  position: relative;
+  font-size: 32px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.nlRight {
+
+  input {
+    border-radius: 0!important;
+    border-top: none!important;
+    border-right: none!important;
+    border-left: none!important;
+    //padding: .4375rem 0!important;
+    border-bottom: 1px solid black!important;
+    outline: none!important;
+
+    background: none repeat scroll 0 0 #ffffff;
+    //border: 1px solid #aaa;
+    padding: 5px;
+    font-size: 18px;
+  }
+  input[type='checkbox'] {
+    position: absolute; // take it out of document flow
+    opacity: 0.5; // hide it
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+      margin-top: 25px;
+      a {
+        font-weight: normal;
+      }
+    }
+    // Box.
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border: 1px solid black;
+    }
+    // Box hover
+    &:hover + label:before {
+      //background: #b61928;
+      border: 1px solid #b61928;
+    }
+    // Box checked
+    &:checked + label:before {
+      background: #b61928;
+      border: 1px solid #b61928;
+    }
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 12px;
+      background: white;
+      width: 2px;
+      height: 2px;
+      box-shadow:
+              2px 0 0 white,
+              4px 0 0 white,
+              4px -2px 0 white,
+              4px -4px 0 white,
+              4px -6px 0 white,
+              4px -8px 0 white;
+      transform: rotate(45deg);
+    }
+  }
+
+
+
+}
+
+#c165 {
+
+
+
+  input {
+    width: 100%;
+  }
+
+  .input-text-combined {
+    width: 100%;
+    display: inline-flex;
+    @media (max-width: $screen-xs-max) {
+      display: block;
+    }
+
+    .nl-second {
+      margin-left: 4%;
+      @media (max-width: $screen-xs-max) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .tx-andrae {
+    margin-top: 0;
+  }
+
+  .cr_form {
+    width: 75%;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+
+    margin-top: 40px;
+    margin-bottom: 80px;
+
+    .nlLeft {
+      width: 100%!important;
+    }
+
+    .cr_ipe_item {
+      //padding-top: 20px;
+      margin-bottom: 20px;
+      //padding-bottom: 20px;
+    }
+
+    .cr_button {
+      font-size: 18px;
+      border-radius: 0;
+      background-color: #000000;
+      color: #ffffff;
+      padding: 0;
+      &:hover {
+        background-color: #b61928;
+      }
+    }
+
+    .fieldwrap_type_select {
+      width: 100%;
+      position: relative;
+      &:before {
+        background: url("data:image/svg+xml;utf8,<svg id='Ebene_1' data-name='Ebene 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 13.71'><defs><style>.cls-1{fill:white;}</style></defs><title>arrow-down</title><g id='Page-1'><g id='Vertrieb'><path id='Shape' class='cls-1' d='M53.85,103.85a1.69,1.69,0,0,1-1.21-.5L41.15,91.86a1,1,0,0,1,1.41-1.42l11.29,11.29,11.3-11.29a1,1,0,0,1,1.41,0,1,1,0,0,1,0,1.42l-11.5,11.49A1.67,1.67,0,0,1,53.85,103.85Z' transform='translate(-40.85 -90.15)'/></g></g></svg>")  no-repeat;
+        background-position: center;
+        background-size: 24px;
+        background-color: #b61928;
+        pointer-events: none;
+        content: "";
+        font-size: 15px;
+        position: absolute;
+        right: 0;
+        color: #fff;
+        margin-top: 23px;
+        height: 40px;
+        width: 40px;
+      }
+      select {
+        height: 40px;
+        border-radius: 0!important;
+        -webkit-appearance: none;
+        outline:0px;
+        border: 1px solid #000;
+      }
+    }
+
+
+  }
+  .clever_form_error {
+    background-color: #f99;
+    color: #000;
+    border: 1px solid #f22 !important;
+  }
+
+  .badge {
+    display: none;
+  }
+
+  .cr_hinweistext {
+  }
+
+  .cr_body label {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto;
+    margin-top: 8px;
+    text-align: left;
+    font-weight: bold;
+    position: relative;
+  }
+  .cr_ds {
+    overflow: auto;
+    //width: 75%;
+  }
+
+  .width-50 {
+    width: 48%;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .input-text-combined {
+      display: block;
+    }
+    .width-50 {
+      width: 100%
+    }
+    .nl-second {
+      margin-left: 0;
+    }
+
+  }
+
+
+
+}
+
+/**
+ * Newsletter Status Seiten
+ */
+#SubPage {
+  .subPageHeaderRow {
+    margin-bottom: 20px;
+  }
+  .adressNewsletter {
+    margin-top: 30px;
+    margin-bottom: 90px;
+  }
+
+
+
+
+}
+
+.powermail_form_1 {
+  font-family: SourceSansPro-Light,sans-serif;
+  position: relative;
+  width: 75%;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  margin-left: -15px;
+
+  h3 {
+    display: none;
+  }
+  .powermail_legend {
+    //display: none;
+    border-bottom: none;
+  }
+
+  .powermail_label {
+    display: none;
+  }
+
+  input {
+    border-radius: 0!important;
+    border-top: none!important;
+    border-right: none!important;
+    border-left: none!important;
+    border-bottom: 1px solid #000!important;
+    outline: 0!important;
+    padding: 5px;
+    font-size: 18px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .powermail_fieldwrap {
+    margin: 10px 0;
+  }
+
+  .powermail_fieldwrap_type_select {
+    width: 100%;
+    position: relative;
+    &:before {
+      background: url("data:image/svg+xml;utf8,<svg id='Ebene_1' data-name='Ebene 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 13.71'><defs><style>.cls-1{fill:white;}</style></defs><title>arrow-down</title><g id='Page-1'><g id='Vertrieb'><path id='Shape' class='cls-1' d='M53.85,103.85a1.69,1.69,0,0,1-1.21-.5L41.15,91.86a1,1,0,0,1,1.41-1.42l11.29,11.29,11.3-11.29a1,1,0,0,1,1.41,0,1,1,0,0,1,0,1.42l-11.5,11.49A1.67,1.67,0,0,1,53.85,103.85Z' transform='translate(-40.85 -90.15)'/></g></g></svg>")  no-repeat;
+      background-position: center;
+      background-size: 24px;
+      background-color: #000000;
+      pointer-events: none;
+      content: "";
+      font-size: 15px;
+      position: absolute;
+      right: 0;
+      color: #fff;
+      margin-top: 0px;
+      height: 40px;
+      width: 40px;
+      transition: background-color 0.3s ease-in;
+
+    }
+    &:hover {
+      &:before {
+        transition: background-color 0.3s ease-in;
+        background-color: #b61928;
+        cursor: pointer;
+      }
+
+    }
+    select {
+      width: 100%;
+      height: 40px;
+      border-radius: 0!important;
+      -webkit-appearance: none;
+      outline:0px;
+      border: 1px solid #000;
+      padding: 5px;
+      font-size: 18px;
+      margin-bottom: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+
+  .powermail_fieldwrap_e_mail {
+    clear: both;
+
+    input {
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  .powermail_submit {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 0;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0;
+    height: 40px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in;
+    &:hover {
+      transition: background-color 0.3s ease-in;
+      background-color: #b61928;
+    }
+  }
+
+  .powermail_fieldwrap_vorname {
+    float: left;
+    width: 50%;
+    input {
+      width: 95%;
+    }
+  }
+  .powermail_fieldwrap_nachname {
+    float: left;
+    width: 50%;
+    input {
+      width: 100%;
+    }
+  }
+
+  .checkbox {
+
+    input[type='checkbox'] {
+      position: absolute; // take it out of document flow
+      opacity: 0; // hide it
+
+      & + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        margin-top: 5px;
+
+        a {
+          font-weight: normal;
+        }
+      }
+      // Box.
+      & + label:before {
+        content: '';
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border: 1px solid black;
+      }
+      // Box hover
+      &:hover + label:before {
+        //background: #b61928;
+        border: 1px solid #b61928;
+      }
+      // Box checked
+      &:checked + label:before {
+        background: #b61928;
+        border: 1px solid #b61928;
+      }
+      // Checkmark. Could be replaced with an image
+      &:checked + label:after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 14px;
+        background: white;
+        width: 2px;
+        height: 2px;
+        box-shadow:
+                2px 0 0 white,
+                4px 0 0 white,
+                4px -2px 0 white,
+                4px -4px 0 white,
+                4px -6px 0 white,
+                4px -8px 0 white;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .parsley-errors-list, .powermail_message_error {
+    li {
+      background-color: #b61928;
+      list-style: none;
+      margin-left: 0;
+      padding: 10px;
+      color: #fff;
+
+
+    }
+  }
+
+}
+
+

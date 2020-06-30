@@ -1,0 +1,23 @@
+.cc-banner {
+  .cc-message {
+    line-height: 1.1;
+  }
+
+  .cc-compliance {
+    background-color: black;
+  }
+  .cc-btn {
+    border-radius: 0 !important;
+    //transition: background-color 0.3s ease-in-out;
+    //transition: color 0.3s ease-in-out;
+    &:hover {
+      text-decoration: none !important;
+      background-color: #000000 !important;
+      color: white;
+
+    }
+
+
+  }
+
+}

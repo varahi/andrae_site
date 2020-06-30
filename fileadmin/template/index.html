@@ -1,0 +1,23 @@
+<body xmlns="http://www.w3.org/1999/xhtml" lang="de"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+<!-- Page Content -->
+<f:render partial="header"/>
+<div id="StartPage">
+    <div class="header">
+        <div class="header-caption">
+            <f:format.raw>{contentLeft}</f:format.raw>
+        </div>
+    </div>
+    <div class="container hyphenate" lang="de">
+        <f:format.raw>{content}</f:format.raw>
+    </div>
+
+    <a id="scrollUp" href="#top" title="Scroll to top"></a>
+    <div id="scrollUp-active"></div>
+    <!--HTML HIER-->
+</div>
+<!-- page content -->
+
+<f:render partial="footer"/>
+</body>

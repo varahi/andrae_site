@@ -1,0 +1,68 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="de"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+    <body>
+
+    <!-- Page Content -->
+    <f:render partial="header"/>
+    <div id="SubPage" class="subPageHeader">
+        <div class="container">
+            <div class="col-md-12 col-lg-12 col-xs-12 subPageHeaderRow">
+                <f:format.raw>{contentLeft}</f:format.raw>
+            </div>
+
+            <div class="contact-data col-lg-3 col-md-3 hidden-sm hidden-xs">
+                <f:if condition="{data.pid} == 12">
+                    <f:then>
+                        <aside>
+                            <ul class="side-nav">
+                                <li><a class="hyphenate text" lang="de"
+                                       href="javascript: window.history.go(-1)">Zurück</a></li>
+                            </ul>
+                        </aside>
+                    </f:then>
+                    <f:else>
+                        <v:page.menu expandAll="true" pageUid="{data.pid}" entryLevel="0" levels="0" as="sidemenu">
+                            <aside>
+                                <ul class="side-nav">
+                                    <f:for each="{sidemenu}" as="side">
+                                        <li class="{side.class}"><a class="hyphenate text" lang="de" href="{side.link}"
+                                                                    title="{side.title}">{side.title}</a></li>
+                                    </f:for>
+                                </ul>
+                            </aside>
+                        </v:page.menu>
+                    </f:else>
+                </f:if>
+                <adress>
+                    <ul class="adress adressNewsletter hidden-xs hidden-sm">ANDRÄ Consulting Group
+                        <li>Steinbeisstraße 13</li>
+                        <li>71332 Waiblingen</li>
+                        <f:if condition="{v:page.language()}==1">
+                            <f:then>
+                                <li>Phone: <a href="tel: +497151959500">+49 7151 959500</a></li>
+                                <li>Fax: <a href="fax: +4971519595095">+49 7151 95950-95</a></li>
+                            </f:then>
+                            <f:else>
+                                <li>Telefon: <a href="tel: +497151959500">07151 959500</a></li>
+                                <li>Telefax: <a href="fax: +4971519595095">07151 95950-95</a></li>
+                            </f:else>
+                        </f:if>
+                        <li><a href="mailto:info@andrae.de"> info@andrae.de</a></li>
+                        <li><a href="www.andrae.de">www.andrae.de</a></li>
+                    </ul>
+                </adress>
+            </div>
+            <div class="main-content col-lg-9 col-md-12 content career hyphenate">
+                <article class="hideH1">
+                    <f:format.raw>{content}</f:format.raw>
+                </article>
+            </div>
+            <a id="scrollUp" href="#top" title="Scroll to top"></a>
+            <div id="scrollUp-active"></div>
+        </div>
+    </div>
+    <!-- page content -->
+
+    <f:render partial="footer"/>
+    </body>
