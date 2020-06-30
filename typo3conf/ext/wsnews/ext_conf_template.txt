@@ -1,0 +1,5 @@
+# cat=basic/enable; type=boolean; label=Enable devLog:Debugging-only! Will write to typo3temp directory
+#enableDevLog = 1
+
+# cat=basic/enable; type=string; label=Url pah which will be imported
+#urlPath = https://105226.mainfo.net/aktuelles.xml

@@ -17,3 +17,9 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\Ws\Wsnews\Tasks
     'title'            => 'Export CleverReach',
     'description'      => 'Vorbereitung für das Senden der ausgewählten Daten an CleverReach API (noch nicht implememntiert).'
 );
+
+
+//if (TYPO3_MODE === 'BE') {
+//    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['extbase']['commandControllers']['Ws-News'] =
+//        \Ws\Wsnews\Command\ImportCommandController::class;
+//}
