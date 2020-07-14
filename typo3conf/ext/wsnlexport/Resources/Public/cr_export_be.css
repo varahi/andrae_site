@@ -1,0 +1,22 @@
+.typo3-docheader-functions {
+    height: 50px !important;
+}
+
+.news-card {
+    border: 1px solid #706f6f;
+    margin-bottom: 15px;
+}
+
+.news-header {
+    background-color: #eeeeee;
+    border-bottom: 1px solid #706f6f;
+    padding: 10px;
+}
+
+.news-content {
+    padding: 10px;
+}
+
+.news-title {
+
+}

@@ -1,0 +1,30 @@
+<f:layout name="Backend" />
+
+<f:section name="content">
+    <h1>Newsletter Export</h1>
+
+
+    <div class="tx_wsnlexport" >
+        <f:if condition="{response.message}=='OK'">
+            <f:then>
+                <h2 class="text-success">Export erfolgreich.</h2>
+                <p>Bei CleverReach <a href="https://190979.cleverreach.com/admin" target="_blank" class="export-link">einloggen</a></p>
+                <f:comment>
+                    <!-- Newsletter wird nicht richtig formatiert dargestellt, daher lieber ausgeblendet -->
+                <article>
+                    <f:format.raw>{response.newsletter}</f:format.raw>
+                </article>
+                </f:comment>
+            </f:then>
+            <f:else>
+                <p class="export-failed">Export konnte nicht ausgeführt werden.</p>
+            </f:else>
+        </f:if>
+
+
+        <f:link.action action="index" class="btn btn-default">
+            Übersicht
+        </f:link.action>
+    </div>
+
+</f:section>

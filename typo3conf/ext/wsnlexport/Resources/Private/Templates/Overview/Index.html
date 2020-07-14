@@ -1,0 +1,50 @@
+<f:layout name="Backend" />
+
+<f:section name="content">
+
+    <div class="tx_wsnlexport" >
+        <h1>Aktuell aktivierte News-Beiträge:</h1>
+
+        <f:comment>
+        <f:form method="post" action="other">
+            <f:form.select name="monat" options="{1:'01',2: '02',3: '03'}" />
+            <f:form.submit value="ändern"/>
+        </f:form>
+        </f:comment>
+        <f:if condition="{newsArray.countNews} > 0">
+            <f:then>
+                <f:for each="{newsArray.news}" as="news">
+                    <div class="news-card">
+                        <div class="news-header">
+                            <h4 class="news-title">{news.title}</h4>
+                        </div>
+                        <div class="news-content">
+                            <p class="news-teaser">{news.teaser}</p>
+                        </div>
+                    </div>
+
+
+                </f:for>
+
+                <f:if condition="{newsArray.mailingExist}!='1'">
+                    <f:then>
+                        <f:link.action action="send" class="btn btn-default">
+                            Export now
+                        </f:link.action>
+                    </f:then>
+                    <f:else>
+                        <h3 class="text-danger">Es existiert bereits ein aktuelles Mailing!</h3>
+
+                        <p><a href="https://190979.cleverreach.com/admin" target="_blank" class="btn btn-primary">CleverReach Login</a></p>
+                    </f:else>
+                </f:if>
+            </f:then>
+            <f:else>
+                <p>Es wurden noch keine News für den aktuellen Monat freigegeben.</p>
+                <p>Bitte News-Beiträge für den aktuellen Monat freigeben.<br />LIST Mode -> News & Referenzen</p>
+            </f:else>
+        </f:if>
+
+    </div>
+
+</f:section>

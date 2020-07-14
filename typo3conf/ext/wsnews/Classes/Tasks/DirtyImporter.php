@@ -46,7 +46,7 @@ class DirtyImporter {
 
         //$server = "mysql:dbname={$dbData['database']};host={$dbData['host']};port=3306;";
         //$conUser = $dbData['username']; //"meinpv_1_w";
-        //$conPw = $dbData['password']; //"zZu6iJh243WCEBHY";
+        //$conPw = $dbData['password']; //"";
 
         // Get data connections via TYPO3_CONF_VARS
         $database = $GLOBALS['TYPO3_CONF_VARS']['DB']['database'];

@@ -1,0 +1,43 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Export => create"
+                },
+                "description": "",
+                "key": "wscrexport",
+                "mainModule": "tools",
+                "name": "CleverReachExport",
+                "tabLabel": ""
+            }
+        ],
+        "description": "aktivierte Newsbeitr\u00e4ge Exportieren und bei CleverReach eine E-Mail generieren",
+        "emConf": {
+            "category": "module",
+            "custom_category": "",
+            "dependsOn": "typo3 => 7.6.0-7.6.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "7.6.0-7.6.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "wsnlexport",
+        "name": "Newsletter Export to CleverReach",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [],
+        "plugins": [],
+        "vendorName": "WeiseStark"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2018-08-20 02:59",
+        "extension_builder_version": "7.6.18",
+        "be_user": "Markus Elser (3)"
+    }
+}

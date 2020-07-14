@@ -1,0 +1,40 @@
+{namespace ws=WeiseStark\Wsnlexport\ViewHelpers}
+
+<f:be.container>
+	<f:be.pageRenderer includeCssFiles="{
+		1: '{f:uri.resource(path:\'cr_export_be.css\')}'
+	}" includeJsFiles="{
+		2: '{f:uri.resource(path:\'cr_export_be.js\')}'
+	}" loadJQuery="1"/>
+	<div class="typo3-fullDoc">
+		<div id="typo3-docheader">
+			<div class="typo3-docheader-functions">
+				<div class="left">
+					<h2>News - Export Newsletter to CleverReach</h2>
+				</div>
+
+				<div class="right">
+					<f:be.pagePath />
+					<f:be.pageInfo />
+				</div>
+			</div>
+
+			<f:comment>
+			<div class="typo3-docheader-buttons">
+				<div class="left">
+				</div>
+				<div class="right">
+					<f:be.buttons.shortcut />
+				</div>
+			</div>
+			</f:comment>
+		</div>
+		<div id="typo3-docbody">
+			<div id="typo3-inner-docbody" class="realurl-backend">
+				<f:render section="content" />
+			</div>
+		</div>
+		<div id="realurl-dialog-confirm"></div>
+
+	</div>
+</f:be.container>

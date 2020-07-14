@@ -1,0 +1,27 @@
+<f:layout name="Backend" />
+
+<f:section name="content">
+
+    <div class="tx_wsnlexport" >
+        <h1>Aktuell aktivierte News-Beiträge:</h1>
+
+        <f:for each="{newsArray.news}" as="news">
+            <div class="news-card">
+                <div class="news-header">
+                    <h4 class="news-title">{news.title}</h4>
+                </div>
+                <div class="news-content">
+                    <p class="news-teaser">{news.teaser}</p>
+                </div>
+            </div>
+
+
+        </f:for>
+
+
+        <f:link.action action="index" class="btn btn-default">
+            Übersicht
+        </f:link.action>
+    </div>
+
+</f:section>
