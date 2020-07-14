@@ -33,25 +33,27 @@ class DirtyImporter {
     {
         // Daten aus Config holen
         //$conf = include '../../../../LocalConfiguration.php'; // TTL Daten ????
-        $dbData = [
 
+        /*
+        $dbData = [
             'database' => 'typo3_dev',
             'host' => '172.17.0.1',
             'password' => 'dev',
             'socket' => '',
             'username' => 'root'
         ];
+        */
 
-        // ToDo: move connection to TYPO3 env.
-        //$database = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['dbname'];
-        //$host = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['host'];
-        //$conUser = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['user'];
-        //$conPw = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['password'];
-        //$server = "mysql:dbname={$database};host={$host};port=3306;";
+        //$server = "mysql:dbname={$dbData['database']};host={$dbData['host']};port=3306;";
+        //$conUser = $dbData['username']; //"meinpv_1_w";
+        //$conPw = $dbData['password']; //"zZu6iJh243WCEBHY";
 
-        $server = "mysql:dbname={$dbData['database']};host={$dbData['host']};port=3306;";
-        $conUser = $dbData['username']; //"meinpv_1_w";
-        $conPw = $dbData['password']; //"zZu6iJh243WCEBHY";
+        // Get data connections via TYPO3_CONF_VARS
+        $database = $GLOBALS['TYPO3_CONF_VARS']['DB']['database'];
+        $host = $GLOBALS['TYPO3_CONF_VARS']['DB']['host'];
+        $server = "mysql:dbname={$database};host={$host};port=3306;";
+        $conUser = $GLOBALS['TYPO3_CONF_VARS']['DB']['username'];
+        $conPw = $GLOBALS['TYPO3_CONF_VARS']['DB']['password'];
 
         try{
             $pdo = new \PDO($server, $conUser, $conPw, [\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'" ]);
