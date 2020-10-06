@@ -20,10 +20,10 @@ class dbConnection {
         $dbData = [
 
             'database' => 'typo3_dev',
-            'host' => '172.17.0.1',
-            'password' => 'dev',
+            'host' => '172.0.0.1',
+            'password' => 's1tD0*5#Lx4*kG#z',
             'socket' => '',
-            'username' => 'root'
+            'username' => 'andraw_1'
         ];
 
         // ToDo: move connection to TYPO3 env.
