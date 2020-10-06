@@ -1,0 +1,11 @@
+<f:if condition="{data.tx_mask_panel}">
+    <div class="panel-group">
+        <f:for each="{data.tx_mask_panel}" as="data_item">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><f:link.page pageUid="{data_item.tx_mask_link}">{data_item.tx_mask_link_title}</f:link.page></h4>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</f:if>

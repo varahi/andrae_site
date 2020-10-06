@@ -1,5 +1,5 @@
-<div class="section section-2 container">
-    <div class="section-2__content">
+<f:if condition="{data.tx_mask_hide_container} == '1' ">
+    <f:then>
         <f:if condition="{data.header}">
             <h2>{data.header}</h2>
         </f:if>
@@ -9,5 +9,33 @@
         <f:if condition="{data.bodytext}">
             <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html><br />
         </f:if>
-    </div>
-</div>
+
+        <f:if condition="{data.tx_mask_links}">
+            <f:for each="{data.tx_mask_links}" as="data_item">
+                <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject><br />
+            </f:for>
+        </f:if>
+    </f:then>
+    <f:else>
+        <div class="section section-2 container {data.tx_mask_custom_class}">
+            <div class="section-2__content">
+                <f:if condition="{data.header}">
+                    <h2>{data.header}</h2>
+                </f:if>
+                <f:if condition="{data.tx_mask_subheader}">
+                    <h5><strong>{data.tx_mask_subheader}</strong></h5>
+                </f:if>
+                <f:if condition="{data.bodytext}">
+                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html><br />
+                </f:if>
+
+                <f:if condition="{data.tx_mask_links}">
+                    <f:for each="{data.tx_mask_links}" as="data_item">
+                        <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject><br />
+                    </f:for>
+                </f:if>
+            </div>
+        </div>
+    </f:else>
+</f:if>
+

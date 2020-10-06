@@ -19,21 +19,45 @@
                 "label": "Container with text",
                 "key": "container_text",
                 "shortLabel": "Container with text",
-                "description": "Container with text",
-                "icon": "",
+                "description": "Container with text and links",
+                "icon": "fa-list-alt",
                 "color": "#000000",
                 "columns": [
                     "header",
+                    "tx_mask_hide_container",
+                    "tx_mask_custom_class",
                     "tx_mask_subheader",
-                    "bodytext"
+                    "bodytext",
+                    "tx_mask_links"
                 ],
                 "labels": [
                     "Header",
+                    "Hide Containers ",
+                    "Custom Class",
                     "Subheader",
-                    "Bodytext"
+                    "Bodytext",
+                    "Links"
                 ],
                 "options": {
-                    "2": "rte"
+                    "4": "rte"
+                }
+            },
+            "container_two_columns": {
+                "label": "Container two columns",
+                "key": "container_two_columns",
+                "shortLabel": "Container two columns",
+                "description": "Container two columns",
+                "icon": "",
+                "color": "#000000",
+                "columns": {
+                    "0": "tx_mask_section_id",
+                    "1": "tx_mask_left_column",
+                    "3": "tx_mask_right_column"
+                },
+                "labels": {
+                    "0": "Section ID",
+                    "1": "Left Column",
+                    "3": "Right Column"
                 }
             },
             "headerblock": {
@@ -50,6 +74,34 @@
                 "labels": [
                     "Image",
                     "Text"
+                ]
+            },
+            "panel_links": {
+                "label": "Panel links",
+                "key": "panel_links",
+                "shortLabel": "Panel links",
+                "description": "Panel links",
+                "icon": "",
+                "color": "#000000",
+                "columns": [
+                    "tx_mask_panel"
+                ],
+                "labels": [
+                    "Panel"
+                ]
+            },
+            "simple_image": {
+                "label": "Simple Image",
+                "key": "simple_image",
+                "shortLabel": "Simple Image",
+                "description": "Simple Image",
+                "icon": "fa-image",
+                "color": "#000000",
+                "columns": [
+                    "image"
+                ],
+                "labels": [
+                    "Image"
                 ]
             },
             "unsere": {
@@ -141,6 +193,36 @@
             "tx_mask_video_webm": {
                 "tt_content": {
                     "tx_mask_video_webm": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_panel": {
+                "tt_content": {
+                    "tx_mask_panel": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_left_column": {
+                "tt_content": {
+                    "tx_mask_left_column": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_right_column": {
+                "tt_content": {
+                    "tx_mask_right_column": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_hide_container": {
+                "tt_content": {
+                    "tx_mask_hide_container": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_custom_class": {
+                "tt_content": {
+                    "tx_mask_custom_class": "tinytext"
+                }
+            },
+            "tx_mask_links": {
+                "tt_content": {
+                    "tx_mask_links": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
         },
@@ -268,6 +350,140 @@
                     ]
                 },
                 "key": "video_webm"
+            },
+            "tx_mask_panel": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "top"
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "key": "panel"
+            },
+            "tx_mask_left_column": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "top"
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "key": "left_column"
+            },
+            "tx_mask_right_column": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "top"
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "key": "right_column"
+            },
+            "tx_mask_hide_container": {
+                "config": {
+                    "type": "check",
+                    "items": [
+                        [
+                            "hide"
+                        ]
+                    ],
+                    "cols": "",
+                    "default": ""
+                },
+                "exclude": "1",
+                "key": "hide_container"
+            },
+            "tx_mask_custom_class": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "custom_class"
+            },
+            "tx_mask_links": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "tt_content",
+                    "foreign_record_defaults": {
+                        "colPos": "999"
+                    },
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "collapseAll": "1",
+                        "levelLinksPosition": "top",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "useSortable": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "newRecordLinkTitle": ""
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select"
+                    }
+                },
+                "exclude": "1",
+                "cTypes": [
+                    "mask_panel_links"
+                ],
+                "key": "links"
             }
         }
     },
@@ -287,6 +503,159 @@
                 "sys_file_reference": {
                     "tx_mask_video_webm": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
+            }
+        }
+    },
+    "tx_mask_panel": {
+        "sql": {
+            "tx_mask_link_title": {
+                "tx_mask_panel": {
+                    "tx_mask_link_title": "tinytext"
+                }
+            },
+            "tx_mask_link": {
+                "tx_mask_panel": {
+                    "tx_mask_link": "tinytext"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_link_title": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_panel",
+                "label": "Link title",
+                "key": "link_title"
+            },
+            "tx_mask_link": {
+                "config": {
+                    "type": "input",
+                    "wizards": {
+                        "_PADDING": "2",
+                        "link": {
+                            "type": "popup",
+                            "title": "Link",
+                            "icon": "EXT:backend\/Resources\/Public\/Images\/FormFieldWizard\/wizard_link.gif",
+                            "module": {
+                                "name": "wizard_link",
+                                "urlParameters": {
+                                    "mode": "wizard"
+                                }
+                            },
+                            "JSopenParams": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                            "params": {
+                                "blindLinkOptions": "",
+                                "allowedExtensions": ""
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_panel",
+                "label": "Link",
+                "key": "link"
+            }
+        }
+    },
+    "tx_mask_left_column": {
+        "sql": {
+            "tx_mask_left_column_content": {
+                "tx_mask_left_column": {
+                    "tx_mask_left_column_content": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_left_column_content": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "tt_content",
+                    "foreign_record_defaults": {
+                        "colPos": "999"
+                    },
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "collapseAll": "1",
+                        "levelLinksPosition": "top",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "useSortable": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "newRecordLinkTitle": ""
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select"
+                    }
+                },
+                "exclude": "1",
+                "cTypes": [
+                    "mask_simple_image"
+                ],
+                "inlineParent": "tx_mask_left_column",
+                "label": "Left Column Content",
+                "key": "left_column_content"
+            }
+        }
+    },
+    "tx_mask_right_column": {
+        "sql": {
+            "tx_mask_right_column_content": {
+                "tx_mask_right_column": {
+                    "tx_mask_right_column_content": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_right_column_content": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "tt_content",
+                    "foreign_record_defaults": {
+                        "colPos": "999"
+                    },
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "collapseAll": "1",
+                        "levelLinksPosition": "top",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "useSortable": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "newRecordLinkTitle": ""
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select"
+                    }
+                },
+                "exclude": "1",
+                "cTypes": [
+                    "mask_container_text"
+                ],
+                "inlineParent": "tx_mask_right_column",
+                "label": "Right Column Content",
+                "key": "right_column_content"
             }
         }
     }

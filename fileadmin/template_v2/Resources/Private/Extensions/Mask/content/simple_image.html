@@ -1,0 +1,6 @@
+<f:if condition="{data.image}">
+<f:for each="{data.image}" as="file">
+  <f:image image="{file}" alt="{file.alternative}" title="{file.title}" maxWidth="1200" additionalAttributes="{loading: 'lazy'}" class="res-i"  />
+</f:for>
+</f:if>
+
