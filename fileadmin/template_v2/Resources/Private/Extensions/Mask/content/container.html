@@ -1,0 +1,7 @@
+<div class="section container">
+  <f:if condition="{data.image}">
+    <f:for each="{data.image}" as="file">
+      <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="1120" class="res-i" additionalAttributes="{loading: 'lazy'}" />
+    </f:for>
+  </f:if>
+</div>

@@ -1,0 +1,13 @@
+<div class="section section-2 container">
+    <div class="section-2__content">
+        <f:if condition="{data.header}">
+            <h2>{data.header}</h2>
+        </f:if>
+        <f:if condition="{data.tx_mask_subheader}">
+            <h5><strong>{data.tx_mask_subheader}</strong></h5>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html><br />
+        </f:if>
+    </div>
+</div>

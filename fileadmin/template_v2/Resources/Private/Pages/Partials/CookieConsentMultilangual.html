@@ -1,0 +1,56 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+    <f:section name="CookieConsentMultilangual">
+
+        <script>
+            var languageId = '{v:page.language()}';
+
+            var message = "";
+            var dismiss = "OK";
+            var link = "";
+            var href = "/impressum-datenschutz/datenschutz/";
+
+            // @todo: Inhaltselemente im Backend anlegen und per viewhelper einfügen (evtl. über hidden input felder)
+            // um Text editierbar zu machen.
+            switch (languageId) {
+                case '0':
+                    message = "Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. Weitere Informationen zu Cookies erhalten Sie in unserer ";
+                    link = "Datenschutzerklärung";
+                    break;
+
+                case '1':
+                    message = "This website uses cookies to ensure you get the best experience on our website. ";
+                    link = "Learn more";
+                    dismiss = "Got it!";
+                    href = "/en/impressum-datenschutz/datenschutz/";
+                    break;
+            }
+
+            window.addEventListener("load", function(){
+                
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#b61928"
+                        },
+                        "button": {
+                            "background": "#fff",
+                            //"text": "#b61928"
+                        }
+                    },
+                    "theme": "classic",
+                    "content": {
+                        "message": message,
+                        "dismiss": dismiss,
+                        "link": link,
+                        "href": href
+                    }
+                })});
+        </script>
+
+    </f:section>
+
+</div>

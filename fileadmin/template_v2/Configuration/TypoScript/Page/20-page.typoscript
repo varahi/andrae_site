@@ -1,0 +1,24 @@
+page = PAGE
+page.meta.description.data = page:description
+page.meta.keywords.data = page:keywords
+page.meta.viewport = width=device-width, initial-scale=1, maximum-scale=1
+page.headerData {
+    701 = TEXT
+    701.value (
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+        <link rel="icon" href="fileadmin/template/img/favicon.png" type="image/x-icon">
+    )
+}
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+    file = fileadmin/template_v2/Resources/Private/Pages/Templates/Index.html
+    partialRootPath = fileadmin/template_v2/Resources/Private/Pages/Partials/
+
+    variables {
+        contentLeft < styles.content.getLeft
+        content < styles.content.get
+        contentRight < styles.content.getRight
+        //partialRootPath = fileadmin/Partials
+    }
+}

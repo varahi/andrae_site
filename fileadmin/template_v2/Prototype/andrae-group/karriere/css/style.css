@@ -1,0 +1,244 @@
+img.img-bg, .picture-bg {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ttu {
+  text-transform: uppercase;
+}
+
+a {
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+}
+
+.res-i {
+  max-width: 100%;
+  height: auto;
+}
+
+.headerBlock {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  min-height: calc(100vh - 80px);
+}
+.headerBlock::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(118, 118, 118, 0.54);
+}
+.headerBlock img {
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.headerBlock .section-title {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 1100px;
+}
+
+body h1 {
+  margin-top: 0;
+  font-size: 42px;
+  font-weight: 600;
+  text-transform: none;
+}
+@media (min-width: 768px) {
+  body h1 {
+    font-size: 47px;
+  }
+}
+
+body h5 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 1200px) {
+  .row--lg {
+    --bs-gutter-x: 80px;
+    margin-left: calc(-1 * var(--bs-gutter-x)/ 2);
+    margin-right: calc(-1 * var(--bs-gutter-x)/ 2);
+  }
+  .row--lg > * {
+    padding-left: calc(var(--bs-gutter-x)/2);
+    padding-right: calc(var(--bs-gutter-x)/2);
+  }
+}
+.top-nav {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  margin-bottom: 40px;
+  z-index: 200;
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+}
+.top-nav.sticky {
+  border-bottom: 1px solid #333;
+}
+
+.linksBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.linksBlock__item {
+  padding-top: 15px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: solid 2px transparent;
+  padding-bottom: 12px;
+  text-decoration: none !important;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+}
+.linksBlock__item:not(:last-child) {
+  margin-right: 30px;
+}
+.linksBlock__item.active, .linksBlock__item:hover {
+  color: #88535e;
+  border-color: #b61928;
+}
+
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.section a {
+  color: #b61928;
+  text-transform: none;
+}
+.section h5 {
+  text-transform: none;
+}
+.section__content {
+  max-width: 430px;
+}
+
+.section-2__content {
+  margin-left: auto;
+  max-width: 850px;
+}
+
+.section-final h5 {
+  text-transform: uppercase;
+}
+
+.new-footer {
+  background-color: #f7f7f7;
+}
+
+.text-red {
+  color: #b61928;
+}
+
+@media (min-width: 768px) {
+  .new-footer h5 {
+    margin-right: -150px;
+  }
+}
+.new-footer .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.new-footer .row::before, .new-footer .row::after {
+  display: none;
+}
+
+.new-footer__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.video-wrap {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1128px;
+}
+.video-wrap::before {
+  position: relative;
+  content: "";
+  position: relative;
+  height: 0;
+  display: block;
+  padding-bottom: 55.2304964539%;
+}
+.video-wrap video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-data {
+  color: #7b7b7b;
+}
+.contact-data ul li {
+  padding-left: 0;
+  margin-left: 0;
+}
+.contact-data ul {
+  padding-left: 0 !important;
+}
+.contact-data strong a {
+  color: #b61928 !important;
+}

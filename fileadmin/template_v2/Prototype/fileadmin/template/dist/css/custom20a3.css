@@ -1,0 +1,29 @@
+@font-face{
+    font-family: Source Sans Pro Semibold;
+    src:url(https://andrae.de/fileadmin/template/fonts/SourceSansPro-Semibold.ttf)
+}
+#footer .impressum {
+    color: #fff;
+    margin-top: -33px;
+    right: 10px;
+}
+.align-left {
+    text-align: left;
+}
+.no-transform {
+    text-transform: none;
+}
+h1.semibold {
+    font-family: 'Source Sans Pro Semibold', sans-serif;
+    font-size: 37px;
+}
+h2.light {
+    font-family: SourceSansPro-Light, sans-serif;
+    font-size: 37px;
+}
+.divider hr {
+    border: none;
+    height: 1px;
+    color: #ccc;
+    background-color: #ccc;
+}

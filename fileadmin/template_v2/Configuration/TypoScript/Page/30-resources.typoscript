@@ -1,0 +1,29 @@
+#JS-Dateien einbinden
+page.includeJS.file1 = fileadmin/template/dist/js/all.js
+page.includeJS.file100 = fileadmin/template/dist/js/custom.js
+
+page.includeJS {
+    cookieConsentScript = https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js
+    cookieConsentScript.external = 1
+    cookieConsentScript.disableCompression = 1
+    cookieConsentScript.excludeFromConcatenation = 1
+    cookieConsent = fileadmin/template/js/cookieConsent.js
+}
+
+#CSS-Dateien einbinden
+page.includeCSS {
+    screen1 = fileadmin/template/dist/css/main.min.css
+    screen1.title = display
+    screen1.media = screen
+    cookieConentCss = https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css
+    cookieConentCss.external = 1
+    cookieConentCss.disableCompression = 1
+    cookieConentCss.excludeFromConcatenation = 1
+    style = fileadmin/template_v2/Resources/Public/css/style.css
+    100_custom_css = fileadmin/template/dist/css/custom.css
+}
+
+page.includeJSFooter {
+    10_sticky = fileadmin/template_v2/Resources/Public/js/hc-sticky.js
+    20_script = fileadmin/template_v2/Resources/Public/js/script.js
+}

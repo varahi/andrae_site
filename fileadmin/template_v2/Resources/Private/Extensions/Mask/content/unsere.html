@@ -1,0 +1,25 @@
+<div class="section section-1 container" id="UNSERE">
+  <div class="row row--lg">
+    <div class="col-md-6">
+      <f:if condition="{data.image}">
+        <f:for each="{data.image}" as="file">
+          <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="543" additionalAttributes="{loading: 'lazy'}" class="res-i" />
+        </f:for>
+      </f:if>
+    </div>
+    <div class="col-md-6">
+      <div class="section__content">
+        <f:if condition="{data.header}">
+          <h2>{data.header}</h2>
+        </f:if>
+        <f:if condition="{data.tx_mask_subheader}">
+          <h5><strong>{data.tx_mask_subheader}</strong></h5>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+          <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
+        </f:if>
+        <p><a href="#{data.tx_mask_unsere_link}" class="text-danger scroll-link"><strong>{data.tx_mask_unsere_title}</strong></a></p>
+      </div>
+    </div>
+  </div>
+</div>

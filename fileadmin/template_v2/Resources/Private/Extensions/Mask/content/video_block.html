@@ -1,0 +1,45 @@
+<div class="section container" id="{data.tx_mask_section_id}">
+  <div class="video-wrap">
+    <f:if condition="{data.image}">
+      <f:then>
+        <video poster="{f:if(condition: i.isFirst, then: '{poster.originalFile.publicUrl}') -> f:for(each: '{data.image}', as: 'poster', iteration: 'i')}" controls>
+          <f:if condition="{data.tx_mask_video_mp4}">
+            <f:for each="{data.tx_mask_video_mp4}" as="file">
+              <source src="{file.originalFile.publicUrl}" loading="lazy" type="video/mp4" />
+            </f:for>
+          </f:if>
+          <f:if condition="{data.tx_mask_video_ogv}">
+            <f:for each="{data.tx_mask_video_ogv}" as="file">
+              <source src="{file.originalFile.publicUrl}" loading="lazy" type="video/ogv" />
+            </f:for>
+          </f:if>
+          <f:if condition="{data.tx_mask_video_webm}">
+            <f:for each="{data.tx_mask_video_webm}" as="file">
+              <source src="{file.originalFile.publicUrl}" loading="lazy" type="video/webm" />
+            </f:for>
+          </f:if>
+        </video>
+      </f:then>
+      <f:else>
+        <f:if condition="{data.tx_mask_video_mp4}">
+          <f:for each="{data.tx_mask_video_mp4}" as="file">
+            <source src="{file.originalFile.publicUrl}" loading="lazy" type="video/mp4" />
+          </f:for>
+        </f:if>
+        <f:if condition="{data.tx_mask_video_ogv}">
+          <f:for each="{data.tx_mask_video_ogv}" as="file">
+            <source src="{file.originalFile.publicUrl}" loading="lazy" type="video/ogv" />
+          </f:for>
+        </f:if>
+        <f:if condition="{data.tx_mask_video_webm}">
+          <f:for each="{data.tx_mask_video_webm}" as="file">
+            <source src="{file.originalFile.publicUrl}" loading="lazy" type="video/webm" />
+          </f:for>
+        </f:if>
+      </f:else>
+    </f:if>
+  </div>
+</div>
+
+
+

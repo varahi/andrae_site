@@ -1,0 +1,214 @@
+// mixin
+@import "sass/bourbon/app/assets/stylesheets/bourbon";
+// @import "../../node_modules/rfs/scss";
+
+@import "sass/mixin";
+// @import "sass/fonts";
+img.img-bg, .picture-bg {position: absolute;z-index: -1;left: 0;top: 0;width: 100%;height: 100%;}
+.ttu {text-transform: uppercase;}
+a{@include mt;}
+.res-i {max-width: 100%;height: auto;}
+//mixin end
+
+
+//main style
+
+.headerBlock {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   @media (min-width: 768px) {
+
+  }
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  min-height: calc(100vh - 80px);
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #767676, $alpha: 0.54);
+  }
+
+  img {
+    z-index: 0;
+    object-fit: cover;
+  }
+
+  .section-title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 1100px;
+  }
+
+}
+    body h1 {
+      margin-top: 0;
+       @media (min-width: 768px){
+
+         font-size: 47px;
+        }
+        font-size: 42px;
+      font-weight: 600;
+      text-transform: none;
+    }
+  
+    body h5 {
+      font-size: 24px;
+      font-weight: 400;
+      text-transform: none;
+      margin-bottom: 1em;
+    }
+    @media (min-width: 1200px){
+
+      .row--lg{
+        @include roww(80px);
+      }
+    }
+.top-nav{
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: sticky;
+  margin-bottom: 40px;
+  z-index: 200;
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  @include mt;
+  &.sticky{
+    border-bottom: 1px solid #333;
+  }
+}
+.linksBlock {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
+  &__item {
+    padding-top: 15px;
+    // padding-bottom: rem*;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: solid 2px transparent;
+    padding-bottom: 12px;
+    text-decoration: none !important;
+    
+    @include mt;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &.active,
+    &:hover {
+      color: #88535e;
+      border-color: #b61928;
+    }
+  }
+}
+
+.section{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  a{
+    color: #b61928;
+    text-transform: none;
+  }
+ 
+  h5{
+    text-transform: none;
+  }
+  &__content{
+    max-width: 430px;
+  }
+   
+}
+.section-2{
+  &__content{
+    margin-left: auto;
+    max-width: 850px;
+  }
+}
+.panel-title>a{
+
+}
+.section-final{
+  h5{
+    text-transform: uppercase;
+  }
+}
+
+.new-footer{
+  background-color: #f7f7f7;
+}
+.text-red{
+  color: #b61928;
+}
+
+.new-footer{
+  h5{
+    @media (min-width: 768px) {
+
+      margin-right: -150px;
+    }
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    &::before,
+    &::after{
+      display: none;
+    }
+  }
+}
+.new-footer__col{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: center;
+  // align-items: center;
+}
+
+
+ .video-wrap {
+
+   @include block(1128, 623);
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 1128px;
+
+   video {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+   }
+ }
+
+ .contact-data{
+   color: #7b7b7b;
+   ul li{
+     padding-left: 0;
+     margin-left: 0;
+   }
+   ul{
+     padding-left: 0 !important;
+   }
+   strong{
+     a{
+       color: #b61928 !important;
+     }
+   }
+ }

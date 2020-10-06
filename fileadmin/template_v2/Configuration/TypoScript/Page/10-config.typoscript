@@ -1,0 +1,28 @@
+#realurl settings
+config {
+    prefixLocalAnchors = all
+    simulateStaticDocuments = 0
+    baseURL = /
+    tx_realurl_enable = 1
+    contentObjectExceptionHandler = 0
+    htmlTag_langKey = de
+    metaharset = utf-8
+    no_cache = 1
+}
+
+lib.stdheader.10.setCurrent.htmlSpecialChars = 0
+plugin.tx_indexedsearch._DEFAULT_PI_VARS.lang = 0
+
+# T3Dev include custim fluid_styled_content 25.06.2020
+lib.fluidContent {
+    templateName = Default
+    templateRootPaths {
+        100 = fileadmin/template/fluid_styled_content/Templates/
+    }
+    partialRootPaths {
+        100 = fileadmin/template/fluid_styled_content/Partials/
+    }
+    layoutRootPaths {
+        100 = fileadmin/template/fluid_styled_content/Layouts/
+    }
+}
