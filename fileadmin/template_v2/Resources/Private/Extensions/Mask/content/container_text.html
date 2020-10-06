@@ -17,7 +17,14 @@
         </f:if>
     </f:then>
     <f:else>
-        <div class="section section-2 container {data.tx_mask_custom_class}">
+        <f:if condition="{data.tx_mask_section_id}">
+            <f:then>
+                <div id="{data.tx_mask_section_id}" class="section section-2 container {data.tx_mask_custom_class}">
+            </f:then>
+            <f:else>
+                <div class="section section-2 container {data.tx_mask_custom_class}">
+            </f:else>
+        </f:if>
             <div class="section-2__content">
                 <f:if condition="{data.header}">
                     <h2>{data.header}</h2>

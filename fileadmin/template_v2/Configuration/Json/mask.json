@@ -24,6 +24,7 @@
                 "color": "#000000",
                 "columns": [
                     "header",
+                    "tx_mask_section_id",
                     "tx_mask_hide_container",
                     "tx_mask_custom_class",
                     "tx_mask_subheader",
@@ -32,6 +33,7 @@
                 ],
                 "labels": [
                     "Header",
+                    "Section ID",
                     "Hide Containers ",
                     "Custom Class",
                     "Subheader",
@@ -39,7 +41,7 @@
                     "Links"
                 ],
                 "options": {
-                    "4": "rte"
+                    "5": "rte"
                 }
             },
             "container_two_columns": {
