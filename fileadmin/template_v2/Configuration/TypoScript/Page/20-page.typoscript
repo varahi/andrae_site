@@ -22,3 +22,7 @@ page.10 {
         //partialRootPath = fileadmin/Partials
     }
 }
+
+[globalVar = TSFE:id = 72]
+    page.10.file = fileadmin/template_v2/Resources/Private/Pages/Templates/Subpage.html
+[global]

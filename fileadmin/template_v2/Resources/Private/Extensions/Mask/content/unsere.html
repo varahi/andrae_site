@@ -18,7 +18,15 @@
         <f:if condition="{data.bodytext}">
           <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
         </f:if>
-        <p><f:link.page section="{data.tx_mask_unsere_link}" class="text-danger scroll-link"><strong>{data.tx_mask_unsere_title}</strong></f:link.page></p>
+
+        <!-- Link to section or page -->
+        <f:if condition="{data.tx_mask_unsere_link}">
+          <p><f:link.page section="{data.tx_mask_unsere_link}" class="text-danger scroll-link"><strong>{data.tx_mask_unsere_title}</strong></f:link.page></p>
+        </f:if>
+        <f:if condition="{data.header_link}">
+          <p><f:link.page pageUid="{data.header_link}" class="text-danger scroll-link"><strong>{data.tx_mask_unsere_title}</strong></f:link.page></p>
+        </f:if>
+
       </div>
     </div>
   </div>

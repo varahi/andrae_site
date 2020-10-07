@@ -1,0 +1,19 @@
+<f:render partial="Header"/>
+<div id="SubPage" class="main-content">
+    <div class="section  container">
+        <f:format.raw>{contentLeft}</f:format.raw>
+    </div>
+    <div class="container section">
+        <div class="contact-data col-lg-3 col-md-3 hidden-sm hidden-xs">
+            <f:render partial="LeftColumn"/>
+        </div>
+        <div class="col-lg-9 col-md-9  ">
+            <f:format.raw>{content}</f:format.raw>
+        </div>
+    </div>
+</div>
+<f:format.raw>{contentRight}</f:format.raw>
+<f:render partial="Footer"/>
+
+
+

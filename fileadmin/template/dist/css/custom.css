@@ -27,3 +27,8 @@ h2.light {
     color: #ccc;
     background-color: #ccc;
 }
+
+p b {
+    font-weight: 700 !important;
+    font-family: SourceSansPro-Light,sans-serif;
+}

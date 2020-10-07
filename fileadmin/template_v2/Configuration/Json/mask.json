@@ -119,6 +119,7 @@
                     "tx_mask_subheader",
                     "bodytext",
                     "tx_mask_unsere_link",
+                    "header_link",
                     "tx_mask_unsere_title"
                 ],
                 "labels": [
@@ -126,7 +127,8 @@
                     "Header",
                     "Subheader",
                     "Text",
-                    "Unsere Link",
+                    "Unsere Link to section",
+                    "Link to page",
                     "Unsere Ttile"
                 ],
                 "options": {
@@ -165,16 +167,6 @@
             "tx_mask_subheader": {
                 "tt_content": {
                     "tx_mask_subheader": "text"
-                }
-            },
-            "tx_mask_unsere_link": {
-                "tt_content": {
-                    "tx_mask_unsere_link": "tinytext"
-                }
-            },
-            "tx_mask_unsere_title": {
-                "tt_content": {
-                    "tx_mask_unsere_title": "tinytext"
                 }
             },
             "tx_mask_section_id": {
@@ -226,6 +218,16 @@
                 "tt_content": {
                     "tx_mask_right_column": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
+            },
+            "tx_mask_unsere_link": {
+                "tt_content": {
+                    "tx_mask_unsere_link": "tinytext"
+                }
+            },
+            "tx_mask_unsere_title": {
+                "tt_content": {
+                    "tx_mask_unsere_title": "tinytext"
+                }
             }
         },
         "tca": {
@@ -256,32 +258,6 @@
                 },
                 "exclude": "1",
                 "key": "subheader"
-            },
-            "tx_mask_unsere_link": {
-                "config": {
-                    "type": "input",
-                    "eval": "",
-                    "default": "Aktuelle",
-                    "placeholder": "",
-                    "size": "",
-                    "max": "",
-                    "is_in": ""
-                },
-                "exclude": "1",
-                "key": "unsere_link"
-            },
-            "tx_mask_unsere_title": {
-                "config": {
-                    "type": "input",
-                    "eval": "",
-                    "default": "",
-                    "placeholder": "",
-                    "size": "",
-                    "max": "",
-                    "is_in": ""
-                },
-                "exclude": "1",
-                "key": "unsere_title"
             },
             "tx_mask_section_id": {
                 "config": {
@@ -486,6 +462,32 @@
                 "inlineLabel": "",
                 "inlineIcon": "",
                 "key": "right_column"
+            },
+            "tx_mask_unsere_link": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "unsere_link"
+            },
+            "tx_mask_unsere_title": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "unsere_title"
             }
         }
     },
