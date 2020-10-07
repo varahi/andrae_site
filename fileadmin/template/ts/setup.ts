@@ -152,6 +152,7 @@ page.includeJS {
 
 #CSS-Dateien einbinden
 page.includeCSS {
+    fonts = fileadmin/template_v2/Resources/Public/fonts/fonts.css
     screen1 = fileadmin/template/dist/css/main.min.css
     screen1.title = display
     screen1.media = screen
