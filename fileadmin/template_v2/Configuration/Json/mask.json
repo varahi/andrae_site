@@ -202,16 +202,6 @@
                     "tx_mask_panel": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
-            "tx_mask_left_column": {
-                "tt_content": {
-                    "tx_mask_left_column": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
-            "tx_mask_right_column": {
-                "tt_content": {
-                    "tx_mask_right_column": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
             "tx_mask_hide_container": {
                 "tt_content": {
                     "tx_mask_hide_container": "int(11) DEFAULT '0' NOT NULL"
@@ -225,6 +215,16 @@
             "tx_mask_links": {
                 "tt_content": {
                     "tx_mask_links": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_left_column": {
+                "tt_content": {
+                    "tx_mask_left_column": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_right_column": {
+                "tt_content": {
+                    "tx_mask_right_column": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
         },
@@ -378,56 +378,6 @@
                 "inlineIcon": "",
                 "key": "panel"
             },
-            "tx_mask_left_column": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "--inlinetable--",
-                    "foreign_field": "parentid",
-                    "foreign_table_field": "parenttable",
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "newRecordLinkTitle": "",
-                        "levelLinksPosition": "top"
-                    },
-                    "minitems": "",
-                    "maxitems": "",
-                    "behaviour": {
-                        "localizationMode": "select"
-                    }
-                },
-                "exclude": "1",
-                "inlineLabel": "",
-                "inlineIcon": "",
-                "key": "left_column"
-            },
-            "tx_mask_right_column": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "--inlinetable--",
-                    "foreign_field": "parentid",
-                    "foreign_table_field": "parenttable",
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "newRecordLinkTitle": "",
-                        "levelLinksPosition": "top"
-                    },
-                    "minitems": "",
-                    "maxitems": "",
-                    "behaviour": {
-                        "localizationMode": "select"
-                    }
-                },
-                "exclude": "1",
-                "inlineLabel": "",
-                "inlineIcon": "",
-                "key": "right_column"
-            },
             "tx_mask_hide_container": {
                 "config": {
                     "type": "check",
@@ -486,6 +436,56 @@
                     "mask_panel_links"
                 ],
                 "key": "links"
+            },
+            "tx_mask_left_column": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "top"
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "key": "left_column"
+            },
+            "tx_mask_right_column": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "top"
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "key": "right_column"
             }
         }
     },
@@ -653,6 +653,10 @@
                 },
                 "exclude": "1",
                 "cTypes": [
+                    "textmedia",
+                    "text",
+                    "textpic",
+                    "html",
                     "mask_container_text"
                 ],
                 "inlineParent": "tx_mask_right_column",
