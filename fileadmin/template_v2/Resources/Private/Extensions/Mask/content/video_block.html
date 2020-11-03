@@ -1,5 +1,20 @@
 <div class="section container" id="{data.tx_mask_section_id}">
+
   <div class="video-wrap">
+
+    <f:comment>
+      <f:if condition="{data.tx_mask_video_title}">
+        <div class="video-info">
+          <div class="video-title">{data.tx_mask_video_title}</div>
+          <f:if condition="{data.tx_mask_video_caption}">
+            <div class="video-caption">
+              <f:format.nl2br>{data.tx_mask_video_caption}</f:format.nl2br>
+            </div>
+          </f:if>
+        </div>
+      </f:if>
+    </f:comment>
+
     <f:if condition="{data.image}">
       <f:then>
         <video poster="{f:if(condition: i.isFirst, then: '{poster.originalFile.publicUrl}') -> f:for(each: '{data.image}', as: 'poster', iteration: 'i')}" controls>
@@ -40,6 +55,4 @@
     </f:if>
   </div>
 </div>
-
-
 

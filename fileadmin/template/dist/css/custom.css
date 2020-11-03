@@ -36,3 +36,48 @@ p b {
 .stay_classy {
     font-family: 'stay_classy_sldtregular';
 }
+
+.video-info {
+    position: absolute;
+    z-index: 999;
+    max-width: 600px;
+    max-height: 250px;
+    bottom: 10%;
+    right: 5%;
+}
+.video-wrap .video-title {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.video-wrap .video-caption {
+    font-family: 'stay_classy_sldtregular';
+    font-size: 64px;
+    color: #b61928;
+    font-weight: bold;
+}
+@media (max-width: 978px) {
+    .video-info {
+        bottom: 20%;
+    }
+    .video-wrap .video-title {
+        margin-bottom: 20px;
+    }
+    .video-wrap .video-caption {
+        font-size: 36px;
+    }
+}
+@media (max-width: 640px) {
+    .video-info {
+        bottom: 30%;
+        right: 5%;
+    }
+    .video-wrap .video-title {
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+    .video-wrap .video-caption {
+        font-size: 24px;
+    }
+}

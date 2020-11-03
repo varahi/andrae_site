@@ -145,6 +145,8 @@
                 "columns": [
                     "tx_mask_section_id",
                     "image",
+                    "tx_mask_video_title",
+                    "tx_mask_video_caption",
                     "tx_mask_video_mp4",
                     "tx_mask_video_ogv",
                     "tx_mask_video_webm"
@@ -152,6 +154,8 @@
                 "labels": [
                     "Section ID",
                     "Poster",
+                    "Video Title",
+                    "Video Caption",
                     "Video mp4 format",
                     "Video ogv format",
                     "Video webm format"
@@ -172,21 +176,6 @@
             "tx_mask_section_id": {
                 "tt_content": {
                     "tx_mask_section_id": "tinytext"
-                }
-            },
-            "tx_mask_video_mp4": {
-                "tt_content": {
-                    "tx_mask_video_mp4": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
-            "tx_mask_video_ogv": {
-                "tt_content": {
-                    "tx_mask_video_ogv": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
-            "tx_mask_video_webm": {
-                "tt_content": {
-                    "tx_mask_video_webm": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
             "tx_mask_panel": {
@@ -227,6 +216,31 @@
             "tx_mask_unsere_title": {
                 "tt_content": {
                     "tx_mask_unsere_title": "tinytext"
+                }
+            },
+            "tx_mask_video_title": {
+                "tt_content": {
+                    "tx_mask_video_title": "tinytext"
+                }
+            },
+            "tx_mask_video_caption": {
+                "tt_content": {
+                    "tx_mask_video_caption": "text"
+                }
+            },
+            "tx_mask_video_mp4": {
+                "tt_content": {
+                    "tx_mask_video_mp4": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_video_ogv": {
+                "tt_content": {
+                    "tx_mask_video_ogv": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_video_webm": {
+                "tt_content": {
+                    "tx_mask_video_webm": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
         },
@@ -271,63 +285,6 @@
                 },
                 "exclude": "1",
                 "key": "section_id"
-            },
-            "tx_mask_video_mp4": {
-                "exclude": "1",
-                "options": "file",
-                "config": {
-                    "behaviour": {
-                        "localizationMode": "select"
-                    },
-                    "minitems": "",
-                    "maxitems": "",
-                    "filter": [
-                        {
-                            "parameters": {
-                                "allowedFileExtensions": ""
-                            }
-                        }
-                    ]
-                },
-                "key": "video_mp4"
-            },
-            "tx_mask_video_ogv": {
-                "exclude": "1",
-                "options": "file",
-                "config": {
-                    "behaviour": {
-                        "localizationMode": "select"
-                    },
-                    "minitems": "",
-                    "maxitems": "",
-                    "filter": [
-                        {
-                            "parameters": {
-                                "allowedFileExtensions": ""
-                            }
-                        }
-                    ]
-                },
-                "key": "video_ogv"
-            },
-            "tx_mask_video_webm": {
-                "exclude": "1",
-                "options": "file",
-                "config": {
-                    "behaviour": {
-                        "localizationMode": "select"
-                    },
-                    "minitems": "",
-                    "maxitems": "",
-                    "filter": [
-                        {
-                            "parameters": {
-                                "allowedFileExtensions": ""
-                            }
-                        }
-                    ]
-                },
-                "key": "video_webm"
             },
             "tx_mask_panel": {
                 "config": {
@@ -488,25 +445,90 @@
                 },
                 "exclude": "1",
                 "key": "unsere_title"
-            }
-        }
-    },
-    "sys_file_reference": {
-        "sql": {
+            },
+            "tx_mask_video_title": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "video_title"
+            },
+            "tx_mask_video_caption": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": "",
+                    "format": ""
+                },
+                "exclude": "1",
+                "key": "video_caption"
+            },
             "tx_mask_video_mp4": {
-                "sys_file_reference": {
-                    "tx_mask_video_mp4": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "behaviour": {
+                        "localizationMode": "select"
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "key": "video_mp4"
             },
             "tx_mask_video_ogv": {
-                "sys_file_reference": {
-                    "tx_mask_video_ogv": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "behaviour": {
+                        "localizationMode": "select"
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "key": "video_ogv"
             },
             "tx_mask_video_webm": {
-                "sys_file_reference": {
-                    "tx_mask_video_webm": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "behaviour": {
+                        "localizationMode": "select"
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "key": "video_webm"
             }
         }
     },
@@ -664,6 +686,25 @@
                 "inlineParent": "tx_mask_right_column",
                 "label": "Right Column Content",
                 "key": "right_column_content"
+            }
+        }
+    },
+    "sys_file_reference": {
+        "sql": {
+            "tx_mask_video_mp4": {
+                "sys_file_reference": {
+                    "tx_mask_video_mp4": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_video_ogv": {
+                "sys_file_reference": {
+                    "tx_mask_video_ogv": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_video_webm": {
+                "sys_file_reference": {
+                    "tx_mask_video_webm": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
             }
         }
     }
