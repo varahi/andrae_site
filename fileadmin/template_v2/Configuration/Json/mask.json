@@ -9,10 +9,14 @@
                 "icon": "fa-photo",
                 "color": "#000000",
                 "columns": [
-                    "image"
+                    "image",
+                    "tx_mask_container_header",
+                    "tx_mask_container_text"
                 ],
                 "labels": [
-                    "Image"
+                    "Image",
+                    "Header",
+                    "Text"
                 ]
             },
             "container_text": {
@@ -241,6 +245,16 @@
             "tx_mask_video_webm": {
                 "tt_content": {
                     "tx_mask_video_webm": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_container_header": {
+                "tt_content": {
+                    "tx_mask_container_header": "text"
+                }
+            },
+            "tx_mask_container_text": {
+                "tt_content": {
+                    "tx_mask_container_text": "text"
                 }
             }
         },
@@ -529,6 +543,34 @@
                     ]
                 },
                 "key": "video_webm"
+            },
+            "tx_mask_container_header": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": "",
+                    "format": ""
+                },
+                "exclude": "1",
+                "key": "container_header"
+            },
+            "tx_mask_container_text": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": "",
+                    "format": ""
+                },
+                "exclude": "1",
+                "key": "container_text"
             }
         }
     },

@@ -35,7 +35,7 @@ a {
           justify-content: center;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  min-height: calc(100vh - 180px);
+  min-height: calc(100vh - 80px);
 }
 .headerBlock::before {
   content: "";
@@ -241,24 +241,4 @@ body h5 {
 }
 .contact-data strong a {
   color: #b61928 !important;
-}
-
-.img-wrap-center {
-  position: relative;
-}
-
-.img-wrap-center__caption {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 300;
-  width: 100%;
 }

@@ -1,7 +1,28 @@
 <div class="section container">
-  <f:if condition="{data.image}">
-    <f:for each="{data.image}" as="file">
-      <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="1120" class="res-i" additionalAttributes="{loading: 'lazy'}" />
-    </f:for>
-  </f:if>
+  <div class="img-wrap-center">
+    <f:if condition="{data.image}">
+      <f:for each="{data.image}" as="file">
+        <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="1120" class="res-i" additionalAttributes="{loading: 'lazy'}" />
+      </f:for>
+    </f:if>
+    <div class="img-wrap-center__caption">
+
+      <f:if condition="{data.tx_mask_container_header}">
+        <h2><f:format.raw>{data.tx_mask_container_header}</f:format.raw></h2>
+      </f:if>
+      <f:if condition="{data.tx_mask_container_text}">
+        <p><f:format.raw>{data.tx_mask_container_text}</f:format.raw></p>
+      </f:if>
+    </div>
+  </div>
 </div>
+
+<!--
+<div class="img-wrap-center">
+  <img src="img/center-img2.jpg" loading="lazy" alt="" class="res-i">
+  <div class="img-wrap-center__caption">
+
+    <h2>DAS GEHEIMNIS DES ERFOLGS  <br> IST DIE BESTÄNDIGKEIT DES ZIELS.</h2>
+    <p>Benjamin Disraeli</p>
+  </div>
+</div> -->

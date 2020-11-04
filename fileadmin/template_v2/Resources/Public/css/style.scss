@@ -23,7 +23,7 @@ a{@include mt;}
   }
   padding-top: rem(40);
   padding-bottom: rem(40);
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 180px);
   &::before {
     content: '';
     position: absolute;
@@ -211,4 +211,16 @@ a{@include mt;}
        color: #b61928 !important;
      }
    }
+ }
+
+ .img-wrap-center{
+   position: relative;
+ }
+ .img-wrap-center__caption{
+   @include a-cent1;
+   text-align: center;
+   color: #ffffff;
+   font-size: 18px;
+   font-weight: 300;
+   width: 100%;
  }
