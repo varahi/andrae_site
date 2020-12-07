@@ -1,0 +1,10 @@
+lib.topNavigation = TEXT
+lib.topNavigation.value (
+            <a class="linksBlock__item " href="#UNSERE">UNSERE KULTUR </a>
+            <a class="linksBlock__item" href="#Karrierechancen">Karrierechancen</a>
+            <a class="linksBlock__item" href="#Ausbildung"> Offene Stellen </a>
+            <a class="linksBlock__item" href="#Ausbildung">Ausbildung</a>
+            <!-- <a class="linksBlock__item" href="#">Stellen</a>
+            <a class="linksBlock__item" href="#">KULTUR</a> -->
+            <a class="linksBlock__item" href="#Duale">Duale Hochschule</a>
+)
