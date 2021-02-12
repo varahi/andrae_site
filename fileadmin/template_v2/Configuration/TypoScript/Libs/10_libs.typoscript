@@ -1,0 +1,8 @@
+lib {
+    leftColumn = RECORDS
+    leftColumn {
+        tables = tt_content
+        source = {$page.leftColumn}
+        dontCheckPid = 1
+    }
+}

@@ -1,3 +1,4 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/template_v2/Configuration/TypoScript/Page/" extensions="typoscript">
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/template_v2/Configuration/TypoScript/Navigation/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/template_v2/Configuration/TypoScript/Libs/" extensions="typoscript">
 
