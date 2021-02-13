@@ -1,8 +1,7 @@
 lib.sideMenu = HMENU
 lib.sideMenu {
     special = directory
-    special.value = 9
-
+    special.value = {$page.menu.sideMenuPid}
     wrap = <aside><ul class="side-nav">|</ul></aside>
 
     # We define the first level as text menu.
