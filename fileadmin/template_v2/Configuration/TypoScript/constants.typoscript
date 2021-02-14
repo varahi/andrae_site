@@ -4,4 +4,9 @@ page {
     menu {
         sideMenuPid = 9
     }
+    footer {
+        leftColumn = 548
+        centerColumn = 549
+        rightColumn = 550
+    }
 }

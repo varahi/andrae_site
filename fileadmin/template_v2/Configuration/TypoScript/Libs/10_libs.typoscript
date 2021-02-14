@@ -5,4 +5,25 @@ lib {
         source = {$page.leftColumn}
         dontCheckPid = 1
     }
+
+    footerLeftColumn = RECORDS
+    footerLeftColumn {
+        tables = tt_content
+        source = {$page.footer.leftColumn}
+        dontCheckPid = 1
+    }
+
+    footerCenterColumn = RECORDS
+    footerCenterColumn {
+        tables = tt_content
+        source = {$page.footer.centerColumn}
+        dontCheckPid = 1
+    }
+
+    footerRightColumn = RECORDS
+    footerRightColumn {
+        tables = tt_content
+        source = {$page.footer.rightColumn}
+        dontCheckPid = 1
+    }
 }
