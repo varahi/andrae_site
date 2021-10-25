@@ -8,10 +8,10 @@
 
 namespace WeiseStark\Wsnlexport\Newsletter;
 
-
 use TYPO3\CMS\Core\Cache\Exception;
+use WeiseStark\Wsnlexport\Controller\AbstractController;
 
-class CreateNewsletter
+class CreateNewsletter extends AbstractController
 {
 
     // CleverReach Rest API
@@ -21,12 +21,46 @@ class CreateNewsletter
     protected $rest;
 
     // @todo Daten aus BE auslesen
-    private $client_id = 190979;
-    private $login = "nl2go_andrae@weise-stark.de";
-    private $password = "Ww8H6KBZ";
+    //rivate $client_id = 190979;
+    //private $login = "viarise";
+    //private $password = "viarise2021";
 
+    /**
+     * @var string
+     */
+    private $client_id;
+
+    /**
+     * @var string
+     */
+    private $login;
+
+    /**
+     * @var string
+     */
+    private $password;
+
+    /**
+     * @var string
+     */
     private $token;
 
+    //private $login = "nl2go_andrae@weise-stark.de";
+    //private $password = "Ww8H6KBZ";
+
+    /**
+     * Initialize methods and form data
+     *
+     * @return
+     */
+    public function __construct()
+    {
+        $config = $this->getConfiguration();
+        $this->client_id = $config['client_id'];
+        $this->login = $config['login'];
+        $this->password = $config['password'];
+        $this->token = $config['token'];
+    }
 
     /**
      * Authentifizierung bei CleverReach API
@@ -34,6 +68,9 @@ class CreateNewsletter
      */
     private function authenticate()
     {
+
+        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->token);
+
         $auth = [
             "client_id" => $this->client_id,
             "login" => $this->login,
@@ -41,7 +78,6 @@ class CreateNewsletter
         ];
         $token = $this->rest->post('/login', $auth);
         $this->rest->setAuthMode("bearer", $token);
-
     }
 
     /**
@@ -51,7 +87,6 @@ class CreateNewsletter
      */
     public function createMailing($mailing)
     {
-
         $this->rest = new \WeiseStark\Wsnlexport\tools\rest("https://rest.cleverreach.com/v2");
         $this->authenticate();
 
@@ -95,13 +130,10 @@ class CreateNewsletter
 
         try {
             $setMailing = $this->rest->post('/mailings.json', json_encode($data));
-        }
-        catch(\Exception $e) {
-
+        } catch (\Exception $e) {
             return ['status' => "Failed",'error'=> $e];
         }
         return ['status' => "OK",'error'=> ''];
-
     }
 
     /**
@@ -116,13 +148,12 @@ class CreateNewsletter
         $allGroups = $this->rest->get("/groups.json");
         $groups = [];
         foreach ($allGroups as $key => $data) {
-            if(!$data->isLocked) {
+            if (!$data->isLocked) {
                 $groups[] = $data->id;
             }
         }
 
         return $groups;
-
     }
 
     /**
@@ -138,12 +169,11 @@ class CreateNewsletter
     /**
      * @throws \Exception
      */
-    public function getMailings() {
-
+    public function getMailings()
+    {
         $this->rest = new \WeiseStark\Wsnlexport\tools\rest("https://rest.cleverreach.com/v2");
         $this->authenticate();
 
         return $this->rest->get('/mailings.json?state=draft');
     }
-
 }

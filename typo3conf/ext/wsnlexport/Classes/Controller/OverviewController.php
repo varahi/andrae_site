@@ -1,5 +1,6 @@
 <?php
 namespace WeiseStark\Wsnlexport\Controller;
+
 /**
  * Created by PhpStorm.
  * User: markuselser
@@ -30,18 +31,17 @@ class OverviewController extends ActionController
      */
     public function __construct()
     {
-
         parent::__construct();
 
         $this->exportNl = new \WeiseStark\Wsnlexport\Newsletter\ExportCleverReach();
-
     }
 
 
     /**
      * @throws \Exception
      */
-    public function indexAction() {
+    public function indexAction()
+    {
 
         // Prüfen, ob bereits ein Newsletter mit aktuellen News existiert.
         $checkMailings = ($this->exportNl->checkMailing()) ? 1 : 0;
@@ -49,7 +49,7 @@ class OverviewController extends ActionController
         // @todo Hier eventl. aus Backend noch einen monat/Jahr Wert übergeben
         $news = $this->exportNl->getNews();
 
-        if(empty($news)) {
+        if (empty($news)) {
             $news = [];
         }
 
@@ -61,12 +61,10 @@ class OverviewController extends ActionController
 
         // Array an BackendTemplate übergeben
         $this->view->assign('newsArray', $newsArray);
-
     }
 
     public function otherAction()
     {
-
         echo "<pre>";
         print_r($_POST);
         echo "</pre>";
@@ -76,31 +74,27 @@ class OverviewController extends ActionController
         echo "</pre>";
 
         exit("MacExit - ".__FILE__." Z: ".__LINE__);
-
-
     }
 
     /**
      * @throws \Exception
      */
-    public function  sendAction() {
+    public function sendAction()
+    {
 
         // Newsletter erstellen
         $result = $this->exportNl->execute();
 
         $this->view->assign('response', $result);
-
     }
 
     /**
      * @throws \Exception
      */
-    public function getAction() {
+    public function getAction()
+    {
 
         // Diese Option wurde aus dem BE Template entfernt
         $this->view->assign('response', $this->exportNl->getMailings());
-
     }
-
-
 }

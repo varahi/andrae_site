@@ -4,7 +4,6 @@ namespace WeiseStark\Wsnlexport\tools;
 
 class rest
 {
-
     public $data = false;
     public $url = "http://nourl.com";
 
@@ -26,7 +25,6 @@ class rest
         $this->url = rtrim($url, '/');
         $this->authModeSettings = new \stdClass;
         $this->debugValues = new \stdClass;
-
     }
 
     /**
@@ -79,6 +77,7 @@ class rest
         }
 
         $url = sprintf("%s?%s", $this->url . $path, ($data ? http_build_query($data) : ""));
+        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($url);
         $this->debug("url", $url);
 
         $curl = curl_init($url);
@@ -103,7 +102,6 @@ class rest
         $this->debugEndTimer();
 
         return $this->returnResult($curl_response, $headers);
-
     }
 
     /**
@@ -172,7 +170,6 @@ class rest
 
         $this->debugEndTimer();
         return $this->returnResult($curl_response, $headers);
-
     }
 
     ##########################################################################
@@ -215,7 +212,6 @@ class rest
      */
     private function setupCurl(&$curl)
     {
-
         $header = array();
 
         switch ($this->postFormat) {
@@ -260,7 +256,7 @@ class rest
     private function returnResult($in, $header = false)
     {
         $this->header = $header;
-
+        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->header);
         if ($this->checkHeader && isset($header["http_code"])) {
             if ($header["http_code"] < 200 || $header["http_code"] >= 300) {
                 //error!?
@@ -275,9 +271,7 @@ class rest
                     throw new \Exception('' . $header["http_code"] . ';' . $message);
                 }
                 $in = null;
-
             }
-
         }
 
         switch ($this->returnFormat) {
@@ -297,5 +291,4 @@ class rest
         list($usec, $sec) = explode(" ", microtime());
         return ((float) $usec + (float) $sec);
     }
-
 }

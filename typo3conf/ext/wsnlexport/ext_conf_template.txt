@@ -1,0 +1,11 @@
+# cat=basic/enable; type=string; label=Client ID
+client_id = 0
+
+# cat=basic/enable; type=string; label=Login
+login =
+
+# cat=basic/enable; type=string; label=Password
+password =
+
+# cat=basic/enable; type=string; label=Token
+token =
