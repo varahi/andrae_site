@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <sheets>
+        <general>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Allgemeine Einstellungen</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>Ansicht</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Kontaktformular</numIndex>
+                                        <numIndex index="1">Andrae->contact</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Kontaktformular Danke-Seite</numIndex>
+                                        <numIndex index="1">Andrae->contactConfirm</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Newsletter</numIndex>
+                                        <numIndex index="1">Andrae->newsletter</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Start Kacheln</numIndex>
+                                        <numIndex index="1">Andrae->startTiles</numIndex>
+                                    </numIndex>
+                                    <numIndex index="10" type="array">
+                                        <numIndex index="0">XML news</numIndex>
+                                        <numIndex index="1">Xml->listNews</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+                </el>
+            </ROOT>
+        </general>
+    </sheets>
+</T3DataStructure>

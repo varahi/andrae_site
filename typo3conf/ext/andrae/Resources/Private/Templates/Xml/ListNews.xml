@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:content="http://purl.org/rss/1.0/modules/content/"
+      xmlns:atom="http://www.w3.org/2005/Atom"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Rss"/>
+<f:section name="main">
+    <content>
+        <f:if condition="{news}">
+            <f:for each="{news}" as="newsItem">
+                <artikel id="{newsItem.uid}">
+                    <beitragsid>
+                        <f:format.cdata>DW<f:format.date format="Ym">{newsItem.datetime}</f:format.date>{newsItem.uid}</f:format.cdata>
+                    </beitragsid>
+                    <kategorie>
+                        <f:if condition="{newsItem.categories}">
+                            <f:for each="{newsItem.categories}" as="newsItemCategory">
+                                <f:format.cdata>{newsItemCategory.title -> f:format.htmlspecialchars()}</f:format.cdata>
+                            </f:for>
+                        </f:if>
+                    </kategorie>
+                    <titel>
+                        <f:format.cdata>{newsItem.title -> f:format.htmlspecialchars()}</f:format.cdata>
+                    </titel>
+                    <inhalt>
+                        <f:format.cdata>{newsItem.bodytext -> f:format.htmlspecialchars()}</f:format.cdata>
+                    </inhalt>
+                    <pubdate>
+                        <f:format.date format="Y-m-d H:i:s">{newsItem.datetime}</f:format.date>
+                    </pubdate>
+                </artikel>
+            </f:for>
+        </f:if>
+    </content>
+</f:section>
+
+</html>

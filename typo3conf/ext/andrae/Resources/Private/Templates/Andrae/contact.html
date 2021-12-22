@@ -1,0 +1,239 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+
+    <!-- Form Name -->
+    <legend>Kontaktformular</legend>
+    <f:form id="contactForm" method="post" pageUid="1" action="contactConfirm">
+        <div class="row">
+            <!-- Multiple Radios (inline) -->
+            <fieldset class="form-group col-lg-12">
+                <label class="col-md-12 control-label" for="gender">Wie möchten Sie kontaktiert werden?:</label>
+                <div class="col-md-12  row">
+                    <label class="radio-inline" for="optionsRadios1">
+                        <input type="radio" name="tx_andrae_andrae[contactType]" id="optionsRadios1" value="Telefon"
+                               checked>
+                        <span>Telefon</span>
+                    </label>
+                    <label class="radio-inline" for="optionsRadios2">
+                        <input type="radio" name="tx_andrae_andrae[contactType]" id="optionsRadios2" value="E-Mail">
+                        <span>E-Mail</span>
+                    </label>
+                    <label class="radio-inline" for="optionsRadios3">
+                        <input type="radio" name="tx_andrae_andrae[contactType]" id="optionsRadios3" value="Post">
+                        <span>Post</span>
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="row">
+
+            <!-- Multiple Radios (inline) -->
+            <fieldset class="form-group col-lg-12">
+                <label class="col-md-12 control-label" for="gender">Anrede:</label>
+                <div class="col-md-12 row">
+                    <label class="radio-inline" for="gender-0">
+                        <input type="radio" name="tx_andrae_andrae[gender]" id="gender-0" value="Frau"
+                               checked="checked">
+                        <span>Frau</span>
+                    </label>
+                    <label class="radio-inline" for="gender-1">
+                        <input type="radio" name="tx_andrae_andrae[gender]" id="gender-1" value="Herr">
+                        <span>Herr</span>
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+        <!-- Text input-->
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label class="col-md-12 control-label" for="firstname">Vorname:</label>
+                <div class="col-md-12 row">
+                    <input id="firstname" name="tx_andrae_andrae[firstname]" type="text" placeholder=""
+                           class="form-control input-md"
+                           data-parsley-trigger="focusout" data-parsley-error-message="Bitte Vorname eintragen"
+                           required>
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group col-sm-6">
+                <label class="col-md-12 control-label" for="lastname">Nachname:</label>
+                <div class="col-md-12 row">
+                    <input id="lastname" name="tx_andrae_andrae[lastname]" type="text" placeholder=""
+                           class="form-control input-md"
+                           data-parsley-trigger="focusout" data-parsley-error-message="Bitte Nachname eintragen"
+                           required>
+
+                </div>
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label class="col-md-12 control-label" for="street">Straße:</label>
+                <div class="col-md-12 row">
+                    <input id="street" name="tx_andrae_andrae[street]" type="text" placeholder=""
+                           class="form-control input-md"
+                           data-parsley-trigger="focusout" data-parsley-error-message="Bitte Straße eintragen">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group col-sm-6">
+                <label class="col-md-12 control-label" for="city">Ort:</label>
+                <div class="col-md-12 row">
+                    <input id="city" name="tx_andrae_andrae[city]" type="text" placeholder=""
+                           class="form-control input-md" data-parsley-trigger="focusout"
+                           data-parsley-error-message="Bitte Ort eintragen">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Text input-->
+            <div class="form-group col-sm-6">
+                <label class="col-md-12 control-label" for="zipcode">PLZ:</label>
+                <div class="col-md-12 row">
+                    <input id="zipcode" name="tx_andrae_andrae[zipcode]" type="text" placeholder=""
+                           class="form-control input-md"
+                           data-parsley-trigger="focusout" data-parsley-error-message="Bitte PLZ eintragen">
+
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group col-sm-6">
+                <label class="col-md-12 control-label" for="phone">Telefon:</label>
+                <div class="col-md-12 row">
+                    <input id="phone" name="tx_andrae_andrae[phone]" type="text" placeholder=""
+                           class="form-control input-md" data-parsley-trigger="focusout"
+                           data-parsley-error-message="Bitte Telefonnummer eintragen" required>
+
+                </div>
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label class="col-md-12 control-label" for="email">E-Mail</label>
+                <div class="col-md-12 row">
+                    <input id="email" name="tx_andrae_andrae[email]" type="email" placeholder=""
+                           class="form-control input-md" data-parsley-trigger="focusout"
+                           data-parsley-error-message="Bitte gültige E-Mail eintragen">
+
+                </div>
+            </div>
+        </div>
+        <!-- Textarea -->
+        <div class="row">
+            <div class="form-group col-lg-12">
+                <label class="col-md-12 control-label" for="message">Nachricht:</label>
+                <div class="col-md-12 row">
+                    <textarea class="form-control" rows="4" id="message" name="tx_andrae_andrae[message]"
+                              data-parsley-trigger="focusout" data-parsley-error-message="Bitte Nachricht eintragen"
+                              required></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Textarea -->
+
+        <!-- CheckBox Datenschutz -->
+        <div class="row">
+            <fieldset class="form-group col-lg-12 testClass">
+                <label class="checkbox-inline" for="dsCheckBox">
+                    <input type="checkbox" name="tx_andrae_andrae[dsCheck]" id="dsCheckBox" value="1"
+                           data-parsley-trigger="focusout"
+                           data-parsley-error-message="Bitte lesen Sie unsere Datenschutzerklärung" required>
+                    <span>Ja, ich habe die Datenschutzerklärung gelesen.</span>
+                </label>
+
+            </fieldset>
+
+        </div>
+
+        <div class="row">
+            <div class="form-group col-lg-12">
+                <div class="col-sm-4 col-xs-12 col-sm-push-8 row">
+                    <button type="submit" class="btn-base send">Senden</button>
+                </div>
+            </div>
+        </div>
+    </f:form>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".testClass").on('click', function() {
+                if( $("#dsCheckBox").is(":checked")) {
+                    $("#dsCheckBox").prop("checked", false);
+                }
+                else {
+                    $("#dsCheckBox").prop("checked", true);
+                }
+
+            });
+
+        });
+
+        $('input[name=tx_andrae_andrae\\[contactType\\]]').on('change', function () {
+            var val = $(this).val();
+
+            switch (val) {
+                case 'Telefon':
+                    $("#street").prop('required', false);
+                    $("#city").prop('required', false);
+                    $("#zipcode").prop('required', false);
+                    $("#email").prop('required', false);
+                    $("#phone").prop('required', true);
+                    $('#contactForm').parsley().reset();
+                    break;
+                case 'E-Mail':
+                    $("#street").prop('required', false);
+                    $("#city").prop('required', false);
+                    $("#zipcode").prop('required', false);
+                    $("#email").prop('required', true);
+                    $("#phone").prop('required', false);
+                    $('#contactForm').parsley().reset();
+                    break;
+                case 'Post':
+                    $("#street").prop('required', true);
+                    $("#city").prop('required', true);
+                    $("#zipcode").prop('required', true);
+                    $("#email").prop('required', false);
+                    $("#phone").prop('required', false);
+                    $('#contactForm').parsley().reset();
+                    break;
+            }
+        });
+
+
+        $('#contactForm').parsley().on('field:validated', function () {
+            var ok = $('.parsley-error').length === 0;
+            $('.bs-callout-info').toggleClass('hidden', !ok);
+            $('.bs-callout-warning').toggleClass('hidden', ok);
+        })
+            .on('form:submit', function (e) {
+                e.preventDefault();
+                var form = $(this);
+                var data = form.serialize();
+
+                alert(data);
+
+                $.ajax({
+                    url: "index.php?id=44",
+                    data: data
+                }).done(function (response) {
+                    console.log(response);
+                }).fail(function () {
+
+                    console.log('failed');
+                }).always(function (response) {
+                    console.log(response);
+
+                });
+            });
+
+        $("textarea").autogrow({vertical: true, horizontal: false});
+    </script>
+</f:section>

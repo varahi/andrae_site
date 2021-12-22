@@ -1,0 +1,12 @@
+###################################################
+# PageTSconfig
+###################################################
+
+# Icon Sprache
+mod.SHARED {
+    defaultLanguageFlag = de
+    defaultLanguageLabel = Deutsch
+}
+
+# CKEditor Konfiguration
+#RTE.default.preset = wstheme

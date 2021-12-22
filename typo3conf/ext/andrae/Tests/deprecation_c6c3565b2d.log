@@ -1,0 +1,22 @@
+29-06-18 10:36: Automatic TCA migration done during bootstrap. Please adapt TCA accordingly, these migrations will be removed with TYPO3 CMS 8. The backend module "Configuration -> TCA" shows the modified values. Please adapt these areas:
+Changed showitem string of TCA table "tx_andrae_domain_model_andrae" type "1" due to changed field "sys_language_uid".
+Migrated TCA table "tx_andrae_domain_model_andrae" showitem field of type "1": Moved additional palette with name "1" as 3rd argument of field "hidden" to an own palette. The result of this part is: "hidden, --palette--;;1"
+29-06-18 10:36: Automatic TCA migration done during bootstrap. Please adapt TCA accordingly, these migrations will be removed with TYPO3 CMS 8. The backend module "Configuration -> TCA" shows the modified values. Please adapt these areas:
+Changed showitem string of TCA table "tx_andrae_domain_model_andrae" type "1" due to changed field "sys_language_uid".
+Migrated TCA table "tx_andrae_domain_model_andrae" showitem field of type "1": Moved additional palette with name "1" as 3rd argument of field "hidden" to an own palette. The result of this part is: "hidden, --palette--;;1"
+29-06-18 10:42: Automatic TCA migration done during bootstrap. Please adapt TCA accordingly, these migrations will be removed with TYPO3 CMS 8. The backend module "Configuration -> TCA" shows the modified values. Please adapt these areas:
+Changed showitem string of TCA table "tx_andrae_domain_model_andrae" type "1" due to changed field "sys_language_uid".
+Migrated TCA table "tx_andrae_domain_model_andrae" showitem field of type "1": Moved additional palette with name "1" as 3rd argument of field "hidden" to an own palette. The result of this part is: "hidden, --palette--;;1"
+29-06-18 10:43: Automatic TCA migration done during bootstrap. Please adapt TCA accordingly, these migrations will be removed with TYPO3 CMS 8. The backend module "Configuration -> TCA" shows the modified values. Please adapt these areas:
+Changed showitem string of TCA table "tx_andrae_domain_model_andrae" type "1" due to changed field "sys_language_uid".
+Migrated TCA table "tx_andrae_domain_model_andrae" showitem field of type "1": Moved additional palette with name "1" as 3rd argument of field "hidden" to an own palette. The result of this part is: "hidden, --palette--;;1"
+29-06-18 10:43: Automatic TCA migration done during bootstrap. Please adapt TCA accordingly, these migrations will be removed with TYPO3 CMS 8. The backend module "Configuration -> TCA" shows the modified values. Please adapt these areas:
+Changed showitem string of TCA table "tx_andrae_domain_model_andrae" type "1" due to changed field "sys_language_uid".
+Migrated TCA table "tx_andrae_domain_model_andrae" showitem field of type "1": Moved additional palette with name "1" as 3rd argument of field "hidden" to an own palette. The result of this part is: "hidden, --palette--;;1"
+29-06-18 10:43: Automatic TCA migration done during bootstrap. Please adapt TCA accordingly, these migrations will be removed with TYPO3 CMS 8. The backend module "Configuration -> TCA" shows the modified values. Please adapt these areas:
+Changed showitem string of TCA table "tx_andrae_domain_model_andrae" type "1" due to changed field "sys_language_uid".
+Migrated TCA table "tx_andrae_domain_model_andrae" showitem field of type "1": Moved additional palette with name "1" as 3rd argument of field "hidden" to an own palette. The result of this part is: "hidden, --palette--;;1"
+29-06-18 10:43: Automatic TCA migration done during bootstrap. Please adapt TCA accordingly, these migrations will be removed with TYPO3 CMS 8. The backend module "Configuration -> TCA" shows the modified values. Please adapt these areas:
+Changed showitem string of TCA table "tx_andrae_domain_model_andrae" type "1" due to changed field "sys_language_uid".
+Migrated TCA table "tx_andrae_domain_model_andrae" showitem field of type "1": Moved additional palette with name "1" as 3rd argument of field "hidden" to an own palette. The result of this part is: "hidden, --palette--;;1"
+

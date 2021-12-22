@@ -1,0 +1,31 @@
+plugin.tx_andrae_andrae {
+	view {
+		# cat=plugin.tx_andrae_andrae/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:andrae/Resources/Private/Templates/
+		# cat=plugin.tx_andrae_andrae/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:andrae/Resources/Private/Partials/
+		# cat=plugin.tx_andrae_andrae/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:andrae/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_andrae_andrae//a; type=string; label=Default storage PID
+		storagePid = 12
+	}
+}
+
+
+
+plugin.tx_powermail {
+	view {
+		templateRootPath = EXT:andrae/Resources/Private/Templates/Extensions/Powermail/Templates/
+		partialRootPath = EXT:andrae/Resources/Private/Templates/Extensions/Powermail/Partials/
+		layoutRootPath = EXT:andrae/Resources/Private/Templates/Extensions/Powermail/Layouts/
+	}
+}
+
+
+plugin.tx_powermail.settings.spamshield.enable = 0
+plugin.tx_powermail.settings.validation.client = 0
+
+plugin.tx_powermail.settings.misc.htmlForHtmlFields = 1
+plugin.tx_powermail.settings.misc.htmlForLabels = 1

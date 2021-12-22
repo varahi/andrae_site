@@ -1,0 +1,114 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:andrae/Configuration/TypoScript/Config/config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:andrae/Configuration/TypoScript/Config/language.ts">
+
+plugin.tx_andrae_andrae {
+	view {
+		templateRootPaths.0 = {$plugin.tx_andrae_andrae.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_andrae_andrae.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_andrae_andrae.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_andrae_andrae.persistence.storagePid}
+	}
+}
+
+plugin.tx_andrae._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-andrae table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-andrae table th {
+		font-weight:bold;
+	}
+
+	.tx-andrae table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)
+
+plugin.tx_powermail {
+	view {
+		templateRootPaths >
+		templateRootPaths {
+			0 = EXT:powermail/Resources/Private/Templates/
+			1 = EXT:andrae/Resources/Private/Templates/Extensions/Powermail/Templates/
+		}
+		partialRootPaths >
+		partialRootPaths {
+			0 = EXT:powermail/Resources/Private/Partials/
+			1 = EXT:andrae/Resources/Private/Templates/Extensions/Powermail/Partials/
+		}
+		layoutRootPaths >
+		layoutRootPaths {
+			0 = EXT:powermail/Resources/Private/Layouts/
+			1 = EXT:andrae/Resources/Private/Templates/Extensions/Powermail/Layouts/
+		}
+	}
+}
+
+
+plugin.tx_powermail {
+
+	_LOCAL_LANG.default.validationerror_validation.120 = No correct email address or already in list
+	_LOCAL_LANG.de.validationerror_validation.120 = Keine korrekte Email-Adresse oder sie befindet sich schon in unserer Liste.
+
+	_LOCAL_LANG.default.validationerror_validation.121 = This email address is not in our list
+	_LOCAL_LANG.de.validationerror_validation.121 = Diese E-Mail-Adresse befindet sich nicht in unserer Liste.
+}
+
+editExamAjax = PAGE
+editExamAjax {
+	typeNum = 133798
+	config {
+		disableAllHeaderCode = 1
+
+		#replace = 1
+		#no_cache = 1
+		#xhtml_cleaning = 0
+		#admPanel = 0
+		#debug = 0
+		#contentObjectExceptionHandler = 0
+
+		xhtml_cleaning = none
+		admPanel = 0
+		debug = 0
+		metaCharset = utf-8
+		additionalHeaders = Content-Type:text/xml;charset=utf-8
+		disablePrefixComment = 1
+
+	}
+	10 = USER
+	10 {
+		userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+		extensionName = Andrae
+		pluginName = Andrae
+		vendorName = Andrae
+		Controller = Xml
+		action = listNews
+		switchableControllerActions {
+			Xml {
+				1 = listNews
+			}
+		}
+	}
+}
